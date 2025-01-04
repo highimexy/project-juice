@@ -1,5 +1,6 @@
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { FiDownload } from "react-icons/fi";
+import { FaShoppingBasket } from "react-icons/fa";
 // components
 import Social from "@/components/Social";
 import Photo from "@/components/Photo";
@@ -20,14 +21,16 @@ const Home = () => {
               We craft exceptional e-liquid experiences, blending bold creativity with premium ingredients to deliver unparalleled flavor and satisfaction
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button 
-                variant="outline"
-                size="lg"
-                className="uppercase flex items-center gap-2"
-              >
-                <span>Download CV</span>
-                <FiDownload className="text-xl" />
-              </Button>
+              <Link href="products">
+                <Button 
+                  variant="outline"
+                  size="lg"
+                  className="uppercase flex items-center gap-2"
+                >
+                  <span>See products</span>
+                  <FaShoppingBasket className="text-xl" />
+                </Button>
+              </Link>
               <div className="mb-8 xl:mb-0">
                 <Social 
                 containerStyles="flex gap-6"
