@@ -14,12 +14,12 @@ const stairAnimation = {
 };
 
 // Calculate the reverse index for staggered delay
-const reverseIndex = (index) => {
-  const totalSteps = 6;
+const reverseIndex = (index: number): number => {
+  const totalSteps = 6; // Total number of steps
   return totalSteps - index - 1;
 };
 
-const Stairs = () => {
+const Stairs: React.FC = () => {
   return (
     <>
       {/* Render 6 motion divs, each representing a step of the stairs. 
