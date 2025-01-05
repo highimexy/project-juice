@@ -149,9 +149,7 @@ const Resume = () => {
                       </li>
                     ))}
                   </ul>
-                  <div>
-                    //TUTAJ DAJ ZDJECIE POGLADOWE
-                  </div>
+                  <div>{/*//TUTAJ DAJ ZDJECIE POGLADOWE*/}</div>
                 </ScrollArea>
               </div>
             </TabsContent>
