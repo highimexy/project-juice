@@ -11,27 +11,33 @@ const ultimate = {
   items: [
     {
       company: "RAGNAROK",
-      duration: "Truskawki, Czerwona porzeczka, Malina, Jeżyna i Mango,",
+      duration: "Truskawki, Porzeczka, Malina, Jeżyna i Mango,",
+      image: "/assets/RAGNAROK.png",
     },
     {
       company: "ONI",
-      duration: "Summer 2021",
+      duration: "Limonka i Orzeźwiające Cytrusy",
+      image: "/assets/ONI.png",
     },
     {
       company: "E-commerce Startup",
       duration: "2020 - 2021",
+      image: "/assets/RAGNAROK.png",
     },
     {
       company: "Tech Academy",
       duration: "2019 - 2020",
+      image: "/assets/RAGNAROK.png",
     },
     {
       company: "Digital Agency",
       duration: "2018 - 2019",
+      image: "/assets/RAGNAROK.png",
     },
     {
       company: "Software Development Firm",
       duration: "2017 - 2018",
+      image: "/assets/RAGNAROK.png",
     },
   ],
 };
@@ -180,21 +186,25 @@ const Resume = () => {
                         key={index}
                         className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-row justify-between items-center"
                       >
-                        <div className="flex flex-col gap-4 w-[200px]">
+                        <div className="flex flex-col gap-4 w-[200px] h-[150]">
                           <div className="flex items-center gap-2">
                             <span className="w-[10px] h-[10px] rounded-full bg-accent"></span>
-                            <h3 className="text-xl text-left">{item.company}</h3>
+                            <h3 className="text-xl text-left">
+                              {item.company}
+                            </h3>
                           </div>
-                          <span className="text-accent text-left">{item.duration}</span>
+                          <span className="text-accent text-left">
+                            {item.duration}
+                          </span>
                         </div>
                         <div className="">
                           <Image
-                            src="/assets/RAGNAROK.png"
+                            src={item.image}
                             priority
                             quality={100}
                             width={150}
                             height={150}
-                            alt=""
+                            alt={item.company}
                             className=""
                           />
                         </div>
