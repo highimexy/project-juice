@@ -1,48 +1,8 @@
 "use client";
 
-import { Description } from "@radix-ui/react-dialog";
-
-
-//about data
-const about = {
-  title: "About me",
-  description:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur accusamus earum quo! Vitae exercitationem soluta, mollitia eius a quasi, ex ducimus consequatur architecto quas fugiat! Vel inventore quod sint quisquam?",
-  info: [
-    {
-      fieldName: "Name",
-      fieldValue: "Wiktor Kowalczky",
-    },
-    {
-      fieldName: "Phone",
-      fieldValue: "(+48) 502 329 XXX",
-    },
-    {
-      fieldName: "Experience",
-      fieldValue: "2+ Years",
-    },
-    {
-      fieldName: "Skype",
-      fieldValue: "Wiktor Kowalczky",
-    },
-    {
-      fieldName: "Nationality",
-      fieldValue: "Polish",
-    },
-    {
-      fieldName: "email",
-      fieldValue: "teslawiktor@gmail.com",
-    },
-    {
-      fieldName: "Freelance",
-      fieldValue: "Available",
-    },
-    {
-      fieldName: "Leanguages",
-      fieldValue: "English, Polish",
-    },
-  ],
-};
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { motion } from "framer-motion";
 
 // flavor1 data
 const flavor1 = {
@@ -84,8 +44,7 @@ const flavor1 = {
   ],
 };
 
-//flavor2 data
-
+// flavor2 data
 const flavor2 = {
   icon: "/assets/resume/cap.svg",
   title: "My education",
@@ -114,30 +73,17 @@ const flavor2 = {
     },
     {
       institution: "Design School",
-      degree: "Diploma in Grafic Design",
+      degree: "Diploma in Graphic Design",
       duration: "2016 - 2018",
     },
     {
-      institution: "Community Collage",
+      institution: "Community College",
       degree: "Associate Degree in Computer Science",
       duration: "2014 - 2016",
     },
   ],
 };
 
-
-
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { motion } from "framer-motion";
 const Resume = () => {
   return (
     <motion.div
@@ -156,13 +102,9 @@ const Resume = () => {
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
             <TabsTrigger value="experience">FLAVOR 1</TabsTrigger>
             <TabsTrigger value="education">FLAVOR 2</TabsTrigger>
-            <TabsTrigger value="skills">FLAVOR 3</TabsTrigger>
-            <TabsTrigger value="about">FLAVOR 4</TabsTrigger>
           </TabsList>
 
-          {/* content */}
           <div className="min-h-[70vh] w-full">
-            {/* experience */}
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{flavor1.title}</h3>
@@ -171,30 +113,26 @@ const Resume = () => {
                 </p>
                 <ScrollArea className="h-[400px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-                    {flavor1.items.map((item, index) => {
-                      return (
-                        <li
-                          key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
-                        >
-                          <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-xl max-w-[260px] text-center min-h-[60px] lg:text-left">
-                            {item.position}
-                          </h3>
-                          <div className="flex items-center gap-3">
-                            {/* dot */}
-                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                            <p>{item.company}</p>
-                          </div>
-                        </li>
-                      );
-                    })}
+                    {flavor1.items.map((item, index) => (
+                      <li
+                        key={index}
+                        className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                      >
+                        <span className="text-accent">{item.duration}</span>
+                        <h3 className="text-xl max-w-[260px] text-center min-h-[60px] lg:text-left">
+                          {item.position}
+                        </h3>
+                        <div className="flex items-center gap-3">
+                          <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                          <p>{item.company}</p>
+                        </div>
+                      </li>
+                    ))}
                   </ul>
                 </ScrollArea>
               </div>
             </TabsContent>
 
-            {/* education */}
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{flavor2.title}</h3>
@@ -203,29 +141,25 @@ const Resume = () => {
                 </p>
                 <ScrollArea className="h-[400px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-                    {flavor2.items.map((item, index) => {
-                      return (
-                        <li
-                          key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
-                        >
-                          <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-xl max-w-[260px] text-center min-h-[60px] lg:text-left">
-                            {item.degree}
-                          </h3>
-                          <div className="flex items-center gap-3">
-                            {/* dot */}
-                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                            <p>{item.institution}</p>
-                          </div>
-                        </li>
-                      );
-                    })}
+                    {flavor2.items.map((item, index) => (
+                      <li
+                        key={index}
+                        className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                      >
+                        <span className="text-accent">{item.duration}</span>
+                        <h3 className="text-xl max-w-[260px] text-center min-h-[60px] lg:text-left">
+                          {item.degree}
+                        </h3>
+                        <div className="flex items-center gap-3">
+                          <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                          <p>{item.institution}</p>
+                        </div>
+                      </li>
+                    ))}
                   </ul>
                 </ScrollArea>
               </div>
             </TabsContent>
-
           </div>
         </Tabs>
       </div>
