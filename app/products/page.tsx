@@ -3,49 +3,116 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
-// flavor1 data
-const flavor1 = {
-  icon: "/assets/resume/badge.svg",
-  title: "My experience",
+// ULTIMATE data
+const ultimate = {
+  title: "ULTIMATE",
   items: [
     {
-      company: "Tech Solutions Inc.",
-      position: "Full Stack Developer",
-      duration: "2022 - Present",
+      company: "RAGNAROK",
+      duration: "Truskawki, Czerwona porzeczka, Malina, Jeżyna i Mango,",
     },
     {
-      company: "Web Design Studio",
-      position: "Front-End Developer Intern",
+      company: "ONI",
       duration: "Summer 2021",
     },
     {
       company: "E-commerce Startup",
-      position: "Freelance Web Developer",
       duration: "2020 - 2021",
     },
     {
       company: "Tech Academy",
-      position: "Teaching Assistant",
       duration: "2019 - 2020",
     },
     {
       company: "Digital Agency",
-      position: "UI/UX Designer",
       duration: "2018 - 2019",
     },
     {
       company: "Software Development Firm",
-      position: "Junior Developer",
       duration: "2017 - 2018",
     },
   ],
 };
 
-// flavor2 data
-const flavor2 = {
-  icon: "/assets/resume/cap.svg",
-  title: "My education",
+// HIDDEN POTION data
+const hiddenpotion = {
+  title: "HIDDEN POTION",
+  items: [
+    {
+      institution: "Online Course Platform",
+      degree: "Full Stack Web Development Bootcamp",
+      duration: "2023",
+    },
+    {
+      institution: "Codeacademy",
+      degree: "Front-end Track",
+      duration: "2022",
+    },
+    {
+      institution: "Online Course",
+      degree: "Programming Course",
+      duration: "2020 - 2021",
+    },
+    {
+      institution: "Tech Institute",
+      degree: "Certified Web Developer",
+      duration: "2019",
+    },
+    {
+      institution: "Design School",
+      degree: "Diploma in Graphic Design",
+      duration: "2016 - 2018",
+    },
+    {
+      institution: "Community College",
+      degree: "Associate Degree in Computer Science",
+      duration: "2014 - 2016",
+    },
+  ],
+};
+
+// LES CRÉATIONS data
+const lescreations = {
+  title: "LES CRÉATIONS",
+  items: [
+    {
+      institution: "Online Course Platform",
+      degree: "Full Stack Web Development Bootcamp",
+      duration: "2023",
+    },
+    {
+      institution: "Codeacademy",
+      degree: "Front-end Track",
+      duration: "2022",
+    },
+    {
+      institution: "Online Course",
+      degree: "Programming Course",
+      duration: "2020 - 2021",
+    },
+    {
+      institution: "Tech Institute",
+      degree: "Certified Web Developer",
+      duration: "2019",
+    },
+    {
+      institution: "Design School",
+      degree: "Diploma in Graphic Design",
+      duration: "2016 - 2018",
+    },
+    {
+      institution: "Community College",
+      degree: "Associate Degree in Computer Science",
+      duration: "2014 - 2016",
+    },
+  ],
+};
+
+// PANDA data
+const panda = {
+  title: "PANDA",
   items: [
     {
       institution: "Online Course Platform",
@@ -92,34 +159,44 @@ const Resume = () => {
     >
       <div className="container mx-auto">
         <Tabs
-          defaultValue="experience"
+          defaultValue="ultimate"
           className="flex flex-col xl:flex-row gap-[60px]"
         >
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-            <TabsTrigger value="experience">ULTIMATE</TabsTrigger>
-            <TabsTrigger value="education">HIDDEN POTION</TabsTrigger>
+            <TabsTrigger value="ultimate">ULTIMATE</TabsTrigger>
+            <TabsTrigger value="hiddenpotion">HIDDEN POTION</TabsTrigger>
             <TabsTrigger value="lescreations">LES CRÉATIONS</TabsTrigger>
             <TabsTrigger value="panda">PANDA</TabsTrigger>
           </TabsList>
 
           <div className="min-h-[70vh] w-full">
-            <TabsContent value="experience" className="w-full">
+            <TabsContent value="ultimate" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{flavor1.title}</h3>
+                <h3 className="text-4xl font-bold">{ultimate.title}</h3>
                 <ScrollArea className="h-[650px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-                    {flavor1.items.map((item, index) => (
+                    {ultimate.items.map((item, index) => (
                       <li
                         key={index}
-                        className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                        className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-row justify-between items-center"
                       >
-                        <span className="text-accent">{item.duration}</span>
-                        <h3 className="text-xl max-w-[260px] text-center min-h-[60px] lg:text-left">
-                          {item.position}
-                        </h3>
-                        <div className="flex items-center gap-3">
-                          <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                          <p>{item.company}</p>
+                        <div className="flex flex-col gap-4 w-[200px]">
+                          <div className="flex items-center gap-2">
+                            <span className="w-[10px] h-[10px] rounded-full bg-accent"></span>
+                            <h3 className="text-xl text-left">{item.company}</h3>
+                          </div>
+                          <span className="text-accent text-left">{item.duration}</span>
+                        </div>
+                        <div className="">
+                          <Image
+                            src="/assets/RAGNAROK.png"
+                            priority
+                            quality={100}
+                            width={150}
+                            height={150}
+                            alt=""
+                            className=""
+                          />
                         </div>
                       </li>
                     ))}
@@ -128,12 +205,62 @@ const Resume = () => {
               </div>
             </TabsContent>
 
-            <TabsContent value="education" className="w-full">
+            <TabsContent value="hiddenpotion" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{flavor2.title}</h3>
+                <h3 className="text-4xl font-bold">{hiddenpotion.title}</h3>
                 <ScrollArea className="h-[650px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-                    {flavor2.items.map((item, index) => (
+                    {hiddenpotion.items.map((item, index) => (
+                      <li
+                        key={index}
+                        className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                      >
+                        <span className="text-accent">{item.duration}</span>
+                        <h3 className="text-xl max-w-[260px] text-center min-h-[60px] lg:text-left">
+                          {item.degree}
+                        </h3>
+                        <div className="flex items-center gap-3">
+                          <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                          <p>{item.institution}</p>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </ScrollArea>
+              </div>
+            </TabsContent>
+
+            <TabsContent value="lescreations" className="w-full">
+              <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                <h3 className="text-4xl font-bold">{lescreations.title}</h3>
+                <ScrollArea className="h-[650px]">
+                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                    {lescreations.items.map((item, index) => (
+                      <li
+                        key={index}
+                        className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                      >
+                        <span className="text-accent">{item.duration}</span>
+                        <h3 className="text-xl max-w-[260px] text-center min-h-[60px] lg:text-left">
+                          {item.degree}
+                        </h3>
+                        <div className="flex items-center gap-3">
+                          <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                          <p>{item.institution}</p>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </ScrollArea>
+              </div>
+            </TabsContent>
+
+            <TabsContent value="panda" className="w-full">
+              <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                <h3 className="text-4xl font-bold">{panda.title}</h3>
+                <ScrollArea className="h-[650px]">
+                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                    {panda.items.map((item, index) => (
                       <li
                         key={index}
                         className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
