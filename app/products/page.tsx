@@ -8,8 +8,6 @@ import { motion } from "framer-motion";
 const flavor1 = {
   icon: "/assets/resume/badge.svg",
   title: "My experience",
-  description:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur accusamus earum quo! Vitae exercitationem soluta, mollitia eius a quasi, ex ducimus consequatur architecto quas fugiat! Vel inventore quod sint quisquam?",
   items: [
     {
       company: "Tech Solutions Inc.",
@@ -48,8 +46,6 @@ const flavor1 = {
 const flavor2 = {
   icon: "/assets/resume/cap.svg",
   title: "My education",
-  description:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur accusamus earum quo! Vitae exercitationem soluta, mollitia eius a quasi, ex ducimus consequatur architecto quas fugiat! Vel inventore quod sint quisquam?",
   items: [
     {
       institution: "Online Course Platform",
@@ -100,18 +96,17 @@ const Resume = () => {
           className="flex flex-col xl:flex-row gap-[60px]"
         >
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-            <TabsTrigger value="experience">FLAVOR 1</TabsTrigger>
-            <TabsTrigger value="education">FLAVOR 2</TabsTrigger>
+            <TabsTrigger value="experience">ULTIMATE</TabsTrigger>
+            <TabsTrigger value="education">HIDDEN POTION</TabsTrigger>
+            <TabsTrigger value="lescreations">LES CRÉATIONS</TabsTrigger>
+            <TabsTrigger value="panda">PANDA</TabsTrigger>
           </TabsList>
 
           <div className="min-h-[70vh] w-full">
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{flavor1.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                  {flavor1.description}
-                </p>
-                <ScrollArea className="h-[400px]">
+                <ScrollArea className="h-[650px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {flavor1.items.map((item, index) => (
                       <li
@@ -136,10 +131,7 @@ const Resume = () => {
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{flavor2.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                  {flavor2.description}
-                </p>
-                <ScrollArea className="h-[400px]">
+                <ScrollArea className="h-[650px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {flavor2.items.map((item, index) => (
                       <li
@@ -157,6 +149,9 @@ const Resume = () => {
                       </li>
                     ))}
                   </ul>
+                  <div>
+                    //TUTAJ DAJ ZDJECIE POGLADOWE
+                  </div>
                 </ScrollArea>
               </div>
             </TabsContent>
