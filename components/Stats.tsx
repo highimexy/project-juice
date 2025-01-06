@@ -5,19 +5,19 @@ import CountUp from "react-countup";
 const stats = [
   {
     num: 6,
-    text: "Years of experience",
+    text: "Lat doświadczenia",
   },
   {
     num: 26,
-    text: "Excellent flavors",
+    text: "Wyjątkowych smaków",
   },
   {
-    num: 4,
-    text: "Exclusive Collection's",
+    num: 3,
+    text: "Ekskluzywne kolekcje",
   },
   {
     num: 100,
-    text: "+ Monthly Happy Client's",
+    text: "+ Miesięcznie zadowolonych klientów",
   },
 ];
 

@@ -13,16 +13,16 @@ const Home = () => {
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* Text */}
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl">E-cig liquids</span>
+            <span className="text-xl">Liquidy do e-papierosów</span>
             <h1 className="h1 mb-6">
-              Hello, we&#39;re <br />{" "}
-              <span className="text-accent">Project-Juice</span>
+              My to <br />{" "}
+              <span className="text-accent">PROJECT JUICE</span>
             </h1>
 
             <p className="max-w-[500px] mb-9 text-white/80">
-              We craft exceptional e-liquid experiences, blending bold
-              creativity with premium ingredients to deliver unparalleled flavor
-              and satisfaction
+              W kreowaniu liquidów łączymy innowacyjność z doskonałymi
+              składnikami, oferując smak, który zaskakuje i dostarcza wyjątkowej
+              przyjemności.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Link href="products">
@@ -31,7 +31,7 @@ const Home = () => {
                   size="lg"
                   className="uppercase flex items-center gap-2"
                 >
-                  <span>See products</span>
+                  <span>Zobacz produkty</span>
                   <FaShoppingBasket className="text-xl" />
                 </Button>
               </Link>
