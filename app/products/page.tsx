@@ -10,33 +10,43 @@ const ultimate = {
   title: "ULTIMATE",
   items: [
     {
-      company: "RAGNAROK",
-      duration: "Truskawki, Porzeczka, Malina, Jeżyna i Mango,",
+      name: "RAGNAROK",
+      taste: "Truskawki, Porzeczka, Malina, Jeżyna i Mango,",
       image: "/assets/RAGNAROK.png",
     },
     {
-      company: "ONI",
-      duration: "Limonka i Orzeźwiające Cytrusy",
+      name: "ONI",
+      taste: "Limonka i Orzeźwiające Cytrusy",
       image: "/assets/ONI.png",
     },
     {
-      company: "E-commerce Startup",
-      duration: "2020 - 2021",
+      name: "SHINIGAMI",
+      taste: "2020 - 2021",
       image: "/assets/RAGNAROK.png",
     },
     {
-      company: "Tech Academy",
-      duration: "2019 - 2020",
+      name: "VALKYRIE",
+      taste: "2019 - 2020",
       image: "/assets/RAGNAROK.png",
     },
     {
-      company: "Digital Agency",
-      duration: "2018 - 2019",
+      name: "KAMI",
+      taste: "2018 - 2019",
+      image: "/assets/KAMI.png",
+    },
+    {
+      name: "ALUCARD",
+      taste: "2017 - 2018",
+      image: "/assets/ALUCARD.png",
+    },
+    {
+      name: "LUNA",
+      taste: "2017 - 2018",
       image: "/assets/RAGNAROK.png",
     },
     {
-      company: "Software Development Firm",
-      duration: "2017 - 2018",
+      name: "YAKUZA",
+      taste: "2017 - 2018",
       image: "/assets/RAGNAROK.png",
     },
   ],
@@ -179,7 +189,7 @@ const Resume = () => {
             <TabsContent value="ultimate" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{ultimate.title}</h3>
-                <ScrollArea className="h-[650px]">
+                <ScrollArea className="h-[620px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {ultimate.items.map((item, index) => (
                       <li
@@ -190,11 +200,11 @@ const Resume = () => {
                           <div className="flex items-center gap-2">
                             <span className="w-[10px] h-[10px] rounded-full bg-accent"></span>
                             <h3 className="text-xl text-left">
-                              {item.company}
+                              {item.name}
                             </h3>
                           </div>
                           <span className="text-accent text-left">
-                            {item.duration}
+                            {item.taste}
                           </span>
                         </div>
                         <div className="">
@@ -204,7 +214,7 @@ const Resume = () => {
                             quality={100}
                             width={150}
                             height={150}
-                            alt={item.company}
+                            alt={item.name}
                             className=""
                           />
                         </div>
