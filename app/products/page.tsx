@@ -12,42 +12,42 @@ const ultimate = {
     {
       name: "RAGNAROK",
       taste: "Truskawki, Porzeczka, Malina, Jeżyna i Mango + Chłodzik",
-      image: "/assets/RAGNAROK.png",
+      image: "/assets/ULTIMATE/RAGNAROK.png",
     },
     {
       name: "ONI",
       taste: "Limonka i Orzeźwiające Cytrusy",
-      image: "/assets/ONI.png",
+      image: "/assets/ULTIMATE/ONI.png",
     },
     {
       name: "SHINIGAMI",
       taste: "Kwaśne Jabłko + Chłodzik",
-      image: "/assets/SHINIGAMI.png",
+      image: "/assets/ULTIMATE/SHINIGAMI.png",
     },
     {
       name: "VALKYRIE",
       taste: "Czerwona Porzeczka, Jeżyna, Jagoda i Malina + Chłodzik",
-      image: "/assets/VALKYRIE.png",
+      image: "/assets/ULTIMATE/VALKYRIE.png",
     },
     {
       name: "KAMI",
       taste: "Truskawka i Smoczy Owoc",
-      image: "/assets/KAMI.png",
+      image: "/assets/ULTIMATE/KAMI.png",
     },
     {
       name: "ALUCARD",
       taste: "Kawowy Koktajl Mleczny z Nutą Wanilii, Karmelu i Herbatników",
-      image: "/assets/ALUCARD.png",
+      image: "/assets/ULTIMATE/ALUCARD.png",
     },
     {
       name: "LUNA",
       taste: "Truskawka i Wiśnia + Chłodzik",
-      image: "/assets/LUNA.png",
+      image: "/assets/ULTIMATE/LUNA.png",
     },
     {
       name: "YAKUZA",
       taste: "Liczi, Ananas + Chłodzik",
-      image: "/assets/YAKUZA.png",
+      image: "/assets/ULTIMATE/YAKUZA.png",
     },
   ],
 };
@@ -60,42 +60,42 @@ const hiddenpotion = {
     {
       name: "SECRET MANGO",
       taste: "Mango, Ananas, Marakuja + Chłodzik",
-      image: "/assets/RAGNAROK.png",
+      image: "/assets/HIDDENPOTION/SECRET MANGO.png",
     },
     {
       name: "GREEN OASIS",
       taste: "Kaktus, Czerwone Owoce, Cytryna + Chłodzik",
-      image: "/assets/ONI.png",
+      image: "/assets/HIDDENPOTION/GREEN OASIS.png",
     },
     {
       name: "SEVEN SINS",
       taste: "Nektarynka i Morela + Chłodzik",
-      image: "/assets/SHINIGAMI.png",
+      image: "/assets/HIDDENPOTION/SEVEN SINS.png",
     },
     {
       name: "EXPLOSIVE MELON",
       taste: "Melon",
-      image: "/assets/VALKYRIE.png",
+      image: "/assets/HIDDENPOTION/EXPLOSIVE MELON.png",
     },
     {
       name: "GREEN BANANA",
       taste: "Banan i Kiwi + Chłodzik",
-      image: "/assets/KAMI.png",
+      image: "/assets/HIDDENPOTION/GREEN BANANA.png",
     },
     {
       name: "RED PINEAPLE",
       taste: "Ananas i Truskawka + Chłodzik",
-      image: "/assets/ALUCARD.png",
+      image: "/assets/HIDDENPOTION/RED PINEAPLE.png",
     },
     {
       name: "MYSTIC RED",
       taste: "Czerwone Owoce i Tajemniczy Składnik + Chłodzik",
-      image: "/assets/LUNA.png",
+      image: "/assets/HIDDENPOTION/MYSTIC RED.png",
     },
     {
       name: "GREEDY LEMON",
       taste: "Tarta z Żółtą i Zieloną Cytryną",
-      image: "/assets/YAKUZA.png",
+      image: "/assets/HIDDENPOTION/GREEDY LEMON.png",
     },
   ],
 };
@@ -262,8 +262,8 @@ const Resume = () => {
                             src={item.image}
                             priority
                             quality={100}
-                            width={150}
-                            height={150}
+                            width={175}
+                            height={175}
                             alt={item.name}
                             className=""
                           />

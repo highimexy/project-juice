@@ -16,8 +16,8 @@ const stats = [
     text: "Exclusive Collection's",
   },
   {
-    num: 500,
-    text: "Code commits",
+    num: 100,
+    text: "+ Monthly Happy Client's",
   },
 ];
 
