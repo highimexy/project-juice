@@ -107,53 +107,53 @@ const lescreations = {
   items: [
     {
       name: "DIABOLIK",
-      taste: "Truskawki, Porzeczka, Malina, Jeżyna i Mango + Chłodzik",
+      taste: "",
       image: "/assets/LESCREATIONS/DIABOLIK.png",
     },
     {
       name: "CINEMATIK",
-      taste: "Limonka i Orzeźwiające Cytrusy",
+      taste: "",
       image: "/assets/LESCREATIONS/CINEMATIK.png",
     },
     {
       name: "BIIIIIATCH",
-      taste: "Kwaśne Jabłko + Chłodzik",
+      taste: "",
       image: "/assets/LESCREATIONS/BIATCH.png",
     },
     {
       name: "QUEEN PEACH",
-      taste: "Truskawka i Smoczy Owoc",
+      taste: "",
       image: "/assets/LESCREATIONS/QUEEN PEACH.png",
     },
     {
       name: "KAWAII",
-      taste: "Kawowy Koktajl Mleczny z Nutą Wanilii, Karmelu i Herbatników",
+      taste: "",
       image: "/assets/LESCREATIONS/KAWAII.png",
     },
     {
       name: "FREEZY COLA",
-      taste: "Liczi, Ananas + Chłodzik",
+      taste: "",
       image: "/assets/LESCREATIONS/FREEZY COLA.png",
     },
     {
       name: "SWEETY MONKEY",
-      taste: "Liczi, Ananas + Chłodzik",
+      taste: "",
       image: "/assets/LESCREATIONS/SWEET MONKEY.png",
     },
     {
       name: "KRO-MIGNON",
-      taste: "Liczi, Ananas + Chłodzik",
+      taste: "",
       image: "/assets/LESCREATIONS/KRO-MIGNON.png",
     },
     {
       name: "FROSTED BOY",
-      taste: "Liczi, Ananas + Chłodzik",
+      taste: "",
       image: "/assets/LESCREATIONS/FROSTED BOY.png",
     },
     {
       name: "HUNGRY BEAR",
-      taste: "Liczi, Ananas + Chłodzik",
-      image: "/assets/LESCREATIONS/DIABOLIK.png",
+      taste: "",
+      image: "/assets/LESCREATIONS/HUNGRY BEAR.png",
     },
   ],
 };
@@ -204,8 +204,8 @@ const Resume = () => {
                             src={item.image}
                             priority
                             quality={100}
-                            width={150}
-                            height={150}
+                            width={175}
+                            height={175}
                             alt={item.name}
                             className=""
                           />
@@ -280,8 +280,8 @@ const Resume = () => {
                             src={item.image}
                             priority
                             quality={100}
-                            width={150}
-                            height={150}
+                            width={175}
+                            height={175}
                             alt={item.name}
                             className=""
                           />
