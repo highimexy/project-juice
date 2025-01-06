@@ -108,72 +108,52 @@ const lescreations = {
     {
       name: "DIABOLIK",
       taste: "Truskawki, Porzeczka, Malina, Jeżyna i Mango + Chłodzik",
-      image: "/assets/RAGNAROK.png",
+      image: "/assets/LESCREATIONS/DIABOLIK.png",
     },
     {
       name: "CINEMATIK",
       taste: "Limonka i Orzeźwiające Cytrusy",
-      image: "/assets/ONI.png",
+      image: "/assets/LESCREATIONS/CINEMATIK.png",
     },
     {
       name: "BIIIIIATCH",
       taste: "Kwaśne Jabłko + Chłodzik",
-      image: "/assets/SHINIGAMI.png",
-    },
-    {
-      name: "PARADISE ISLAND",
-      taste: "Czerwona Porzeczka, Jeżyna, Jagoda i Malina + Chłodzik",
-      image: "/assets/VALKYRIE.png",
+      image: "/assets/LESCREATIONS/BIATCH.png",
     },
     {
       name: "QUEEN PEACH",
       taste: "Truskawka i Smoczy Owoc",
-      image: "/assets/KAMI.png",
+      image: "/assets/LESCREATIONS/QUEEN PEACH.png",
     },
     {
       name: "KAWAII",
       taste: "Kawowy Koktajl Mleczny z Nutą Wanilii, Karmelu i Herbatników",
-      image: "/assets/ALUCARD.png",
-    },
-    {
-      name: "HYSTERIK",
-      taste: "Truskawka i Wiśnia + Chłodzik",
-      image: "/assets/LUNA.png",
+      image: "/assets/LESCREATIONS/KAWAII.png",
     },
     {
       name: "FREEZY COLA",
       taste: "Liczi, Ananas + Chłodzik",
-      image: "/assets/YAKUZA.png",
-    },
-    {
-      name: "FREEZY COLA",
-      taste: "Liczi, Ananas + Chłodzik",
-      image: "/assets/YAKUZA.png",
-    },
-    {
-      name: "TROPIK THUNDER",
-      taste: "Liczi, Ananas + Chłodzik",
-      image: "/assets/YAKUZA.png",
+      image: "/assets/LESCREATIONS/FREEZY COLA.png",
     },
     {
       name: "SWEETY MONKEY",
       taste: "Liczi, Ananas + Chłodzik",
-      image: "/assets/YAKUZA.png",
+      image: "/assets/LESCREATIONS/SWEET MONKEY.png",
     },
     {
       name: "KRO-MIGNON",
       taste: "Liczi, Ananas + Chłodzik",
-      image: "/assets/YAKUZA.png",
+      image: "/assets/LESCREATIONS/KRO-MIGNON.png",
     },
     {
       name: "FROSTED BOY",
       taste: "Liczi, Ananas + Chłodzik",
-      image: "/assets/YAKUZA.png",
+      image: "/assets/LESCREATIONS/FROSTED BOY.png",
     },
     {
       name: "HUNGRY BEAR",
       taste: "Liczi, Ananas + Chłodzik",
-      image: "/assets/YAKUZA.png",
+      image: "/assets/LESCREATIONS/DIABOLIK.png",
     },
   ],
 };
