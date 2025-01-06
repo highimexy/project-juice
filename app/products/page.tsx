@@ -11,7 +11,7 @@ const ultimate = {
   items: [
     {
       name: "RAGNAROK",
-      taste: "Truskawki, Porzeczka, Malina, Jeżyna i Mango,",
+      taste: "Truskawki, Porzeczka, Malina, Jeżyna i Mango + Chłodzik",
       image: "/assets/RAGNAROK.png",
     },
     {
@@ -21,144 +21,159 @@ const ultimate = {
     },
     {
       name: "SHINIGAMI",
-      taste: "2020 - 2021",
-      image: "/assets/RAGNAROK.png",
+      taste: "Kwaśne Jabłko + Chłodzik",
+      image: "/assets/SHINIGAMI.png",
     },
     {
       name: "VALKYRIE",
-      taste: "2019 - 2020",
-      image: "/assets/RAGNAROK.png",
+      taste: "Czerwona Porzeczka, Jeżyna, Jagoda i Malina + Chłodzik",
+      image: "/assets/VALKYRIE.png",
     },
     {
       name: "KAMI",
-      taste: "2018 - 2019",
+      taste: "Truskawka i Smoczy Owoc",
       image: "/assets/KAMI.png",
     },
     {
       name: "ALUCARD",
-      taste: "2017 - 2018",
+      taste: "Kawowy Koktajl Mleczny z Nutą Wanilii, Karmelu i Herbatników",
       image: "/assets/ALUCARD.png",
     },
     {
       name: "LUNA",
-      taste: "2017 - 2018",
-      image: "/assets/RAGNAROK.png",
+      taste: "Truskawka i Wiśnia + Chłodzik",
+      image: "/assets/LUNA.png",
     },
     {
       name: "YAKUZA",
-      taste: "2017 - 2018",
-      image: "/assets/RAGNAROK.png",
+      taste: "Liczi, Ananas + Chłodzik",
+      image: "/assets/YAKUZA.png",
     },
   ],
 };
-
-// HIDDEN POTION data
+{
+  /* Hidden Potion */
+}
 const hiddenpotion = {
   title: "HIDDEN POTION",
   items: [
     {
-      institution: "Online Course Platform",
-      degree: "Full Stack Web Development Bootcamp",
-      duration: "2023",
+      name: "SECRET MANGO",
+      taste: "Mango, Ananas, Marakuja + Chłodzik",
+      image: "/assets/RAGNAROK.png",
     },
     {
-      institution: "Codeacademy",
-      degree: "Front-end Track",
-      duration: "2022",
+      name: "GREEN OASIS",
+      taste: "Kaktus, Czerwone Owoce, Cytryna + Chłodzik",
+      image: "/assets/ONI.png",
     },
     {
-      institution: "Online Course",
-      degree: "Programming Course",
-      duration: "2020 - 2021",
+      name: "SEVEN SINS",
+      taste: "Nektarynka i Morela + Chłodzik",
+      image: "/assets/SHINIGAMI.png",
     },
     {
-      institution: "Tech Institute",
-      degree: "Certified Web Developer",
-      duration: "2019",
+      name: "EXPLOSIVE MELON",
+      taste: "Melon",
+      image: "/assets/VALKYRIE.png",
     },
     {
-      institution: "Design School",
-      degree: "Diploma in Graphic Design",
-      duration: "2016 - 2018",
+      name: "GREEN BANANA",
+      taste: "Banan i Kiwi + Chłodzik",
+      image: "/assets/KAMI.png",
     },
     {
-      institution: "Community College",
-      degree: "Associate Degree in Computer Science",
-      duration: "2014 - 2016",
+      name: "RED PINEAPLE",
+      taste: "Ananas i Truskawka + Chłodzik",
+      image: "/assets/ALUCARD.png",
+    },
+    {
+      name: "MYSTIC RED",
+      taste: "Czerwone Owoce i Tajemniczy Składnik + Chłodzik",
+      image: "/assets/LUNA.png",
+    },
+    {
+      name: "GREEDY LEMON",
+      taste: "Tarta z Żółtą i Zieloną Cytryną",
+      image: "/assets/YAKUZA.png",
     },
   ],
 };
-
-// LES CRÉATIONS data
+{
+  /* lescreations */
+}
 const lescreations = {
   title: "LES CRÉATIONS",
   items: [
     {
-      institution: "Online Course Platform",
-      degree: "Full Stack Web Development Bootcamp",
-      duration: "2023",
+      name: "DIABOLIK",
+      taste: "Truskawki, Porzeczka, Malina, Jeżyna i Mango + Chłodzik",
+      image: "/assets/RAGNAROK.png",
     },
     {
-      institution: "Codeacademy",
-      degree: "Front-end Track",
-      duration: "2022",
+      name: "CINEMATIK",
+      taste: "Limonka i Orzeźwiające Cytrusy",
+      image: "/assets/ONI.png",
     },
     {
-      institution: "Online Course",
-      degree: "Programming Course",
-      duration: "2020 - 2021",
+      name: "BIIIIIATCH",
+      taste: "Kwaśne Jabłko + Chłodzik",
+      image: "/assets/SHINIGAMI.png",
     },
     {
-      institution: "Tech Institute",
-      degree: "Certified Web Developer",
-      duration: "2019",
+      name: "PARADISE ISLAND",
+      taste: "Czerwona Porzeczka, Jeżyna, Jagoda i Malina + Chłodzik",
+      image: "/assets/VALKYRIE.png",
     },
     {
-      institution: "Design School",
-      degree: "Diploma in Graphic Design",
-      duration: "2016 - 2018",
+      name: "QUEEN PEACH",
+      taste: "Truskawka i Smoczy Owoc",
+      image: "/assets/KAMI.png",
     },
     {
-      institution: "Community College",
-      degree: "Associate Degree in Computer Science",
-      duration: "2014 - 2016",
-    },
-  ],
-};
-
-// PANDA data
-const panda = {
-  title: "PANDA",
-  items: [
-    {
-      institution: "Online Course Platform",
-      degree: "Full Stack Web Development Bootcamp",
-      duration: "2023",
+      name: "KAWAII",
+      taste: "Kawowy Koktajl Mleczny z Nutą Wanilii, Karmelu i Herbatników",
+      image: "/assets/ALUCARD.png",
     },
     {
-      institution: "Codeacademy",
-      degree: "Front-end Track",
-      duration: "2022",
+      name: "HYSTERIK",
+      taste: "Truskawka i Wiśnia + Chłodzik",
+      image: "/assets/LUNA.png",
     },
     {
-      institution: "Online Course",
-      degree: "Programming Course",
-      duration: "2020 - 2021",
+      name: "FREEZY COLA",
+      taste: "Liczi, Ananas + Chłodzik",
+      image: "/assets/YAKUZA.png",
     },
     {
-      institution: "Tech Institute",
-      degree: "Certified Web Developer",
-      duration: "2019",
+      name: "FREEZY COLA",
+      taste: "Liczi, Ananas + Chłodzik",
+      image: "/assets/YAKUZA.png",
     },
     {
-      institution: "Design School",
-      degree: "Diploma in Graphic Design",
-      duration: "2016 - 2018",
+      name: "TROPIK THUNDER",
+      taste: "Liczi, Ananas + Chłodzik",
+      image: "/assets/YAKUZA.png",
     },
     {
-      institution: "Community College",
-      degree: "Associate Degree in Computer Science",
-      duration: "2014 - 2016",
+      name: "SWEETY MONKEY",
+      taste: "Liczi, Ananas + Chłodzik",
+      image: "/assets/YAKUZA.png",
+    },
+    {
+      name: "KRO-MIGNON",
+      taste: "Liczi, Ananas + Chłodzik",
+      image: "/assets/YAKUZA.png",
+    },
+    {
+      name: "FROSTED BOY",
+      taste: "Liczi, Ananas + Chłodzik",
+      image: "/assets/YAKUZA.png",
+    },
+    {
+      name: "HUNGRY BEAR",
+      taste: "Liczi, Ananas + Chłodzik",
+      image: "/assets/YAKUZA.png",
     },
   ],
 };
@@ -182,7 +197,6 @@ const Resume = () => {
             <TabsTrigger value="ultimate">ULTIMATE</TabsTrigger>
             <TabsTrigger value="hiddenpotion">HIDDEN POTION</TabsTrigger>
             <TabsTrigger value="lescreations">LES CRÉATIONS</TabsTrigger>
-            <TabsTrigger value="panda">PANDA</TabsTrigger>
           </TabsList>
 
           <div className="min-h-[70vh] w-full">
@@ -196,12 +210,10 @@ const Resume = () => {
                         key={index}
                         className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-row justify-between items-center"
                       >
-                        <div className="flex flex-col gap-4 w-[200px] h-[150]">
+                        <div className="flex flex-col gap-4 w-[250px] h-[150]">
                           <div className="flex items-center gap-2">
                             <span className="w-[10px] h-[10px] rounded-full bg-accent"></span>
-                            <h3 className="text-xl text-left">
-                              {item.name}
-                            </h3>
+                            <h3 className="text-xl text-left">{item.name}</h3>
                           </div>
                           <span className="text-accent text-left">
                             {item.taste}
@@ -225,23 +237,36 @@ const Resume = () => {
               </div>
             </TabsContent>
 
+            {/* Hidden Potion */}
             <TabsContent value="hiddenpotion" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{hiddenpotion.title}</h3>
-                <ScrollArea className="h-[650px]">
+                <ScrollArea className="h-[620px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {hiddenpotion.items.map((item, index) => (
                       <li
                         key={index}
-                        className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                        className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-row justify-between items-center"
                       >
-                        <span className="text-accent">{item.duration}</span>
-                        <h3 className="text-xl max-w-[260px] text-center min-h-[60px] lg:text-left">
-                          {item.degree}
-                        </h3>
-                        <div className="flex items-center gap-3">
-                          <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                          <p>{item.institution}</p>
+                        <div className="flex flex-col gap-4 w-[250px] h-[150]">
+                          <div className="flex items-center gap-2">
+                            <span className="w-[10px] h-[10px] rounded-full bg-accent"></span>
+                            <h3 className="text-xl text-left">{item.name}</h3>
+                          </div>
+                          <span className="text-accent text-left">
+                            {item.taste}
+                          </span>
+                        </div>
+                        <div className="">
+                          <Image
+                            src={item.image}
+                            priority
+                            quality={100}
+                            width={150}
+                            height={150}
+                            alt={item.name}
+                            className=""
+                          />
                         </div>
                       </li>
                     ))}
@@ -250,48 +275,36 @@ const Resume = () => {
               </div>
             </TabsContent>
 
+            {/* LES CREATIONS */}
             <TabsContent value="lescreations" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{lescreations.title}</h3>
-                <ScrollArea className="h-[650px]">
+                <ScrollArea className="h-[620px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {lescreations.items.map((item, index) => (
                       <li
                         key={index}
-                        className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                        className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-row justify-between items-center"
                       >
-                        <span className="text-accent">{item.duration}</span>
-                        <h3 className="text-xl max-w-[260px] text-center min-h-[60px] lg:text-left">
-                          {item.degree}
-                        </h3>
-                        <div className="flex items-center gap-3">
-                          <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                          <p>{item.institution}</p>
+                        <div className="flex flex-col gap-4 w-[250px] h-[150]">
+                          <div className="flex items-center gap-2">
+                            <span className="w-[10px] h-[10px] rounded-full bg-accent"></span>
+                            <h3 className="text-xl text-left">{item.name}</h3>
+                          </div>
+                          <span className="text-accent text-left">
+                            {item.taste}
+                          </span>
                         </div>
-                      </li>
-                    ))}
-                  </ul>
-                </ScrollArea>
-              </div>
-            </TabsContent>
-
-            <TabsContent value="panda" className="w-full">
-              <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{panda.title}</h3>
-                <ScrollArea className="h-[650px]">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-                    {panda.items.map((item, index) => (
-                      <li
-                        key={index}
-                        className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
-                      >
-                        <span className="text-accent">{item.duration}</span>
-                        <h3 className="text-xl max-w-[260px] text-center min-h-[60px] lg:text-left">
-                          {item.degree}
-                        </h3>
-                        <div className="flex items-center gap-3">
-                          <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                          <p>{item.institution}</p>
+                        <div className="">
+                          <Image
+                            src={item.image}
+                            priority
+                            quality={100}
+                            width={150}
+                            height={150}
+                            alt={item.name}
+                            className=""
+                          />
                         </div>
                       </li>
                     ))}
