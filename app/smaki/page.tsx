@@ -158,7 +158,7 @@ const lescreations = {
   ],
 };
 
-const Resume = () => {
+const Smaki = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -299,4 +299,4 @@ const Resume = () => {
   );
 };
 
-export default Resume;
+export default Smaki;

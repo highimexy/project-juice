@@ -33,8 +33,8 @@ const Header = () => {
 
         <div className="hidden xl:flex items-center gap-8">
           <Nav />
-          <Link href={"/contact"}>
-            <Button>Contact</Button>
+          <Link href={"/kontakt"}>
+            <Button>Kontakt</Button>
           </Link>
         </div>
 

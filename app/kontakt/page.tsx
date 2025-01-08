@@ -28,7 +28,7 @@ const info = [
 
 import { motion } from "framer-motion";
 
-const Contact = () => {
+const Kontakt = () => {
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -65,4 +65,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Kontakt;
