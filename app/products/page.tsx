@@ -107,52 +107,52 @@ const lescreations = {
   items: [
     {
       name: "DIABOLIK",
-      taste: "",
+      taste: "Owoce Cytrusowe, Czerwone Owoce, Mięta + Chłodzik",
       image: "/assets/LESCREATIONS/DIABOLIK.png",
     },
     {
       name: "CINEMATIK",
-      taste: "",
+      taste: "Karmelizowany Popcorn",
       image: "/assets/LESCREATIONS/CINEMATIK.png",
     },
     {
       name: "BIIIIIATCH",
-      taste: "",
+      taste: "Truskawka i Grejfrut",
       image: "/assets/LESCREATIONS/BIATCH.png",
     },
     {
       name: "QUEEN PEACH",
-      taste: "",
+      taste: "Brzoskwinia, Malina i Kiwi",
       image: "/assets/LESCREATIONS/QUEEN PEACH.png",
     },
     {
       name: "KAWAII",
-      taste: "",
+      taste: "Owoc Smoka, Guawa, Truskawka i Kiwi",
       image: "/assets/LESCREATIONS/KAWAII.png",
     },
     {
       name: "FREEZY COLA",
-      taste: "",
+      taste: "Coca-Cola",
       image: "/assets/LESCREATIONS/FREEZY COLA.png",
     },
     {
       name: "SWEETY MONKEY",
-      taste: "",
+      taste: "Banan i Truskawka",
       image: "/assets/LESCREATIONS/SWEET MONKEY.png",
     },
     {
       name: "KRO-MIGNON",
-      taste: "",
+      taste: "Malina i Jeżyna",
       image: "/assets/LESCREATIONS/KRO-MIGNON.png",
     },
     {
       name: "FROSTED BOY",
-      taste: "",
+      taste: "Cytryna i Malina + Chłodzik",
       image: "/assets/LESCREATIONS/FROSTED BOY.png",
     },
     {
       name: "HUNGRY BEAR",
-      taste: "",
+      taste: "Czerwone Owoce i Cukierki Lukrecji + Chłodzik",
       image: "/assets/LESCREATIONS/HUNGRY BEAR.png",
     },
   ],
