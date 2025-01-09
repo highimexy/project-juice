@@ -6,6 +6,9 @@ import Social from "@/components/Social";
 import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
 
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
+
 const Home = () => {
   return (
     <section className="h-full">
