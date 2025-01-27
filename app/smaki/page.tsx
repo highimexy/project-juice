@@ -62,7 +62,7 @@ const hiddenpotion = {
       taste: "Mango, Ananas, Marakuja + Chłodzik",
       image: "/assets/HIDDENPOTION/SECRET MANGO.png",
     },
-    {
+    /*{
       name: "GREEN OASIS",
       taste: "Kaktus, Czerwone Owoce, Cytryna + Chłodzik",
       image: "/assets/HIDDENPOTION/GREEN OASIS.png",
@@ -86,17 +86,17 @@ const hiddenpotion = {
       name: "RED PINEAPLE",
       taste: "Ananas i Truskawka + Chłodzik",
       image: "/assets/HIDDENPOTION/RED PINEAPLE.png",
-    },
+    },*/
     {
       name: "MYSTIC RED",
       taste: "Czerwone Owoce i Tajemniczy Składnik + Chłodzik",
       image: "/assets/HIDDENPOTION/MYSTIC RED.png",
     },
-    {
+    /*{
       name: "GREEDY LEMON",
       taste: "Tarta z Żółtą i Zieloną Cytryną",
       image: "/assets/HIDDENPOTION/GREEDY LEMON.png",
-    },
+    },*/
   ],
 };
 {
