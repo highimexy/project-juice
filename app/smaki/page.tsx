@@ -39,7 +39,7 @@ const ultimate = {
       taste: "Kawowy Koktajl Mleczny z Nutą Wanilii, Karmelu i Herbatników",
       image: "/assets/ULTIMATE/ALUCARD.png",
     },
-    {
+    /*{
       name: "LUNA",
       taste: "Truskawka i Wiśnia + Chłodzik",
       image: "/assets/ULTIMATE/LUNA.png",
@@ -48,7 +48,7 @@ const ultimate = {
       name: "YAKUZA",
       taste: "Liczi, Ananas + Chłodzik",
       image: "/assets/ULTIMATE/YAKUZA.png",
-    },
+    },*/
   ],
 };
 {
