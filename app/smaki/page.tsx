@@ -110,7 +110,7 @@ const lescreations = {
       taste: "Owoce Cytrusowe, Czerwone Owoce, Mięta + Chłodzik",
       image: "/assets/LESCREATIONS/DIABOLIK.png",
     },
-    {
+    /*{
       name: "CINEMATIK",
       taste: "Karmelizowany Popcorn",
       image: "/assets/LESCREATIONS/CINEMATIK.png",
@@ -119,7 +119,7 @@ const lescreations = {
       name: "BIIIIIATCH",
       taste: "Truskawka i Grejfrut",
       image: "/assets/LESCREATIONS/BIATCH.png",
-    },
+    },*/
     {
       name: "QUEEN PEACH",
       taste: "Brzoskwinia, Malina i Kiwi",
