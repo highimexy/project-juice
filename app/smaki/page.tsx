@@ -135,7 +135,7 @@ const lescreations = {
       taste: "Coca-Cola",
       image: "/assets/LESCREATIONS/FREEZY COLA.png",
     },
-    {
+    /*{
       name: "SWEETY MONKEY",
       taste: "Banan i Truskawka",
       image: "/assets/LESCREATIONS/SWEET MONKEY.png",
@@ -149,7 +149,7 @@ const lescreations = {
       name: "FROSTED BOY",
       taste: "Cytryna i Malina + Chłodzik",
       image: "/assets/LESCREATIONS/FROSTED BOY.png",
-    },
+    },*/
     {
       name: "HUNGRY BEAR",
       taste: "Czerwone Owoce i Cukierki Lukrecji + Chłodzik",
