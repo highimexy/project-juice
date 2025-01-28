@@ -139,8 +139,8 @@ const lescreations = {
       name: "SWEETY MONKEY",
       taste: "Banan i Truskawka",
       image: "/assets/LESCREATIONS/SWEET MONKEY.png",
-    },
-    {
+    }, */
+   /* {
       name: "KRO-MIGNON",
       taste: "Malina i Jeżyna",
       image: "/assets/LESCREATIONS/KRO-MIGNON.png",
