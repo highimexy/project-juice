@@ -206,7 +206,7 @@ export default function Smaki() {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0 xl:mt-[-50]"
+      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0 xl:mt-[-50px]"
     >
       <div className="container mx-auto">
         <Tabs
@@ -222,7 +222,7 @@ export default function Smaki() {
           </TabsList>
 
           {/* Mobile Dropdown */}
-          <div className="block xl:hidden w-full max-w-[380px] mx-auto mb-[-0] mt-[-70]">
+          <div className="block xl:hidden w-full max-w-[380px] mx-auto mt-[-70px]">
             <DropdownMenu.Root>
               <DropdownMenu.Trigger className="bg-[#383944] text-white py-3 px-6 font-bold rounded-xl w-full text-center flex items-center justify-center gap-2">
                 SMAKI
@@ -232,7 +232,7 @@ export default function Smaki() {
                 <DropdownMenu.Content
                   side="bottom"
                   align="center"
-                  className="bg-[#383944] rounded-lg p-2 shadow-lg mt-2 w-[var(--radix-dropdown-menu-trigger-width)]"
+                  className="bg-[#383944] rounded-lg p-2 shadow-lg mt-2px w-[var(--radix-dropdown-menu-trigger-width)]"
                 >
                   <DropdownMenu.Item
                     className={`px-4 py-2 rounded cursor-pointer ${
@@ -270,7 +270,7 @@ export default function Smaki() {
           </div>
 
           {/* Content */}
-          <div className="min-h-[70vh] max-h-[3] mt-[-40]">
+          <div className="min-h-[70vh] max-h-[3] mt-[-40px]">
             <TabsContent value="ultimate" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{ultimate.title}</h3>
