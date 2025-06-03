@@ -11,8 +11,10 @@
 
 @layer base {
   body {
-    @apply m-4 font-primary bg-primary text-white leading-loose; 
+    @apply m-4 font-primary bg-primary text-white leading-loose;
+    overflow: hidden;
   }
+
   h1 {
     @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
   }

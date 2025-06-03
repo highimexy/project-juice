@@ -1,15 +1,10 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
 import Image from "next/image";
-{
-  /*COMPONENTS*/
-}
-import Nav from "@/components/Nav";
-import MobileNav from "@/components/MobileNav";
 
 const Header = () => {
   return (
-    <header className="py-8 xl:py-12 text-white">
+    <header className="xl:py-12 text-white mb-8">
       <div className="container mx-auto flex justify-between items-center">
         {/*LOGO*/}
 
@@ -21,8 +16,8 @@ const Header = () => {
               src="/assets/photo.png"
               priority
               quality={100}
-              width={150}
-              height={150}
+              width={220}
+              height={220}
               alt=""
               className="object-contain"
             />
@@ -31,17 +26,13 @@ const Header = () => {
 
         {/*desktop nav*/}
 
-        <div className="hidden xl:flex items-center gap-8">
-          <Nav />
+        <div className="flex items-center gap-8">
+          
           <Link href={"/kontakt"}>
             <Button>Kontakt</Button>
           </Link>
         </div>
 
-        {/*mobile nav*/}
-        <div className="xl:hidden">
-          <MobileNav />
-        </div>
       </div>
     </header>
   );
