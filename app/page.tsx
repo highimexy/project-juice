@@ -232,7 +232,7 @@ export default function Smaki() {
                 <DropdownMenu.Content
                   side="bottom"
                   align="center"
-                  className="bg-[#383944] rounded-lg p-2 shadow-lg mt-2px w-[var(--radix-dropdown-menu-trigger-width)]"
+                  className="bg-[#383944] rounded-lg p-2 shadow-lg mt-[8px] w-[var(--radix-dropdown-menu-trigger-width)]"
                 >
                   <DropdownMenu.Item
                     className={`px-4 py-2 rounded cursor-pointer ${
