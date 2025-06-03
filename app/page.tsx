@@ -42,7 +42,7 @@ export default function Smaki() {
       },
       {
         name: "ALUCARD",
-        taste: "Koktajl Mleczny z Nutą Wanilii, Karmelu i Herbatników",
+        taste: "Koktajl Mleczny z Wanilii, Karmelu i Herbatników",
         image: "/assets/ULTIMATE/ALUCARD.png",
       },
       /*{
@@ -168,7 +168,7 @@ export default function Smaki() {
     category: typeof ultimate | typeof hiddenpotion | typeof lescreations
   ) {
     return (
-      <ScrollArea className="xl:h-[600px] h-[560px] ">
+      <ScrollArea className="h-[calc(100vh-280px)] xl:h-[600px]">
         <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[20px]">
           {category.items.map((item, index) => (
             <li
