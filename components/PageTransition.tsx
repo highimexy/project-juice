@@ -18,7 +18,7 @@ const PageTransition: React.FC<PageTransitionProps> = ({ children }) => {
               opacity: 0, 
               transition: {delay:1, duration: 0.4, ease: "easeInOut" }
             }}
-            className="h-screen w-screen fixed bg-primary top-8 pointer-events-none"
+            className="h-screen w-screen fixed bg-primary pointer-events-none"
           />
           {children}</div>
     </AnimatePresence>;

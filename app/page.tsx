@@ -216,15 +216,39 @@ export default function Smaki() {
         >
           {/* Desktop Tabs */}
           <TabsList className="hidden xl:flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-            <TabsTrigger value="ultimate">ULTIMATE</TabsTrigger>
-            <TabsTrigger value="hiddenpotion">HIDDEN POTION</TabsTrigger>
-            <TabsTrigger value="lescreations">LES CRÉATIONS</TabsTrigger>
+            <TabsTrigger
+              value="ultimate"
+              className="relative overflow-hidden px-4 py-2 rounded transition-all duration-300 before:absolute before:inset-0 before:bg-gradient-to-r before:from-pink-500 before:to-purple-500 before:opacity-0 hover:before:opacity-20"
+            >
+              <span className="relative z-10 opacity-0 animate-fade-in">
+                ULTIMATE
+              </span>
+            </TabsTrigger>
+            <TabsTrigger
+              value="hiddenpotion"
+              className="relative overflow-hidden px-4 py-2 rounded transition-all duration-300 before:absolute before:inset-0 before:bg-gradient-to-r before:from-pink-500 before:to-purple-500 before:opacity-0 hover:before:opacity-20"
+            >
+              <span className="relative z-10 opacity-0 animate-fade-in ">
+                HIDDEN POTION
+              </span>
+            </TabsTrigger>
+            <TabsTrigger
+              value="lescreations"
+              className="relative overflow-hidden px-4 py-2 rounded transition-all duration-300 before:absolute before:inset-0 before:bg-gradient-to-r before:from-pink-500 before:to-purple-500 before:opacity-0 hover:before:opacity-20"
+            >
+              <span className="relative z-10 opacity-0 animate-fade-in">
+                LES CRÉATIONS
+              </span>
+            </TabsTrigger>
           </TabsList>
 
           {/* Mobile Dropdown */}
           <div className="block xl:hidden w-full max-w-[380px] mx-auto mt-[-70px]">
             <DropdownMenu.Root>
-              <DropdownMenu.Trigger className="bg-[#383944] text-white py-3 px-6 font-bold rounded-xl w-full text-center flex items-center justify-center gap-2">
+              <DropdownMenu.Trigger
+                className="relative overflow-hidden z-0 bg-[#383944] text-white py-3 px-6 font-bold rounded-xl w-full text-center flex items-center justify-center gap-2 transition-colors duration-300
+        before:absolute before:inset-0 before:bg-gradient-to-r before:from-pink-500 before:to-purple-500 before:opacity-0 hover:before:opacity-20"
+              >
                 SMAKI
                 <FaAngleDown className="text-lg" />
               </DropdownMenu.Trigger>
@@ -235,31 +259,33 @@ export default function Smaki() {
                   className="bg-[#383944] rounded-lg p-2 shadow-lg mt-[8px] w-[var(--radix-dropdown-menu-trigger-width)]"
                 >
                   <DropdownMenu.Item
-                    className={`px-4 py-2 rounded cursor-pointer ${
-                      tabValue === "ultimate"
-                        ? "bg-accent text-black"
-                        : "text-white"
-                    }`}
+                    className={`relative overflow-hidden px-4 py-2 rounded cursor-pointer transition-colors duration-300
+            before:absolute before:inset-0 before:bg-gradient-to-r before:from-pink-500 before:to-purple-500 before:opacity-0 hover:before:opacity-10
+            ${tabValue === "ultimate" ? "bg-accent text-black" : "text-white"}`}
                     onSelect={() => setTabValue("ultimate")}
                   >
                     ULTIMATE
                   </DropdownMenu.Item>
                   <DropdownMenu.Item
-                    className={`px-4 py-2 rounded cursor-pointer ${
-                      tabValue === "hiddenpotion"
-                        ? "bg-accent text-black"
-                        : "text-white"
-                    }`}
+                    className={`relative overflow-hidden px-4 py-2 rounded cursor-pointer transition-colors duration-300
+            before:absolute before:inset-0 before:bg-gradient-to-r before:from-pink-500 before:to-purple-500 before:opacity-0 hover:before:opacity-10
+            ${
+              tabValue === "hiddenpotion"
+                ? "bg-accent text-black"
+                : "text-white"
+            }`}
                     onSelect={() => setTabValue("hiddenpotion")}
                   >
                     HIDDEN POTION
                   </DropdownMenu.Item>
                   <DropdownMenu.Item
-                    className={`px-4 py-2 rounded cursor-pointer ${
-                      tabValue === "lescreations"
-                        ? "bg-accent text-black"
-                        : "text-white"
-                    }`}
+                    className={`relative overflow-hidden px-4 py-2 rounded cursor-pointer transition-colors duration-300
+            before:absolute before:inset-0 before:bg-gradient-to-r before:from-pink-500 before:to-purple-500 before:opacity-0 hover:before:opacity-10
+            ${
+              tabValue === "lescreations"
+                ? "bg-accent text-black"
+                : "text-white"
+            }`}
                     onSelect={() => setTabValue("lescreations")}
                   >
                     LES CRÉATIONS
