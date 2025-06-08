@@ -246,7 +246,7 @@ export default function Smaki() {
           <div className="block xl:hidden w-full max-w-[380px] mx-auto mt-[-70px]">
             <DropdownMenu.Root>
               <DropdownMenu.Trigger
-                className="relative overflow-hidden z-0 bg-[#383944] text-white py-3 px-6 font-bold rounded-xl w-full text-center flex items-center justify-center gap-2 transition-colors duration-300
+                className="relative overflow-hidden z-0 bg-[#383944] text-black py-3 px-6 font-bold text-2xl rounded-xl w-full text-center flex items-center justify-center gap-2 transition-colors duration-300
         before:absolute before:inset-0 before:bg-gradient-to-r before:from-pink-500 before:to-purple-500 before:opacity-0 hover:before:opacity-20"
               >
                 SMAKI
@@ -259,7 +259,7 @@ export default function Smaki() {
                   className="bg-[#383944] rounded-lg p-2 shadow-lg mt-[8px] w-[var(--radix-dropdown-menu-trigger-width)]"
                 >
                   <DropdownMenu.Item
-                    className={`relative overflow-hidden px-4 py-2 rounded cursor-pointer transition-colors duration-300
+                    className={`relative overflow-hidden px-4 py-2 font-bold rounded cursor-pointer transition-colors duration-300
             before:absolute before:inset-0 before:bg-gradient-to-r before:from-pink-500 before:to-purple-500 before:opacity-0 hover:before:opacity-10
             ${tabValue === "ultimate" ? "bg-accent text-black" : "text-white"}`}
                     onSelect={() => setTabValue("ultimate")}
@@ -267,7 +267,7 @@ export default function Smaki() {
                     ULTIMATE
                   </DropdownMenu.Item>
                   <DropdownMenu.Item
-                    className={`relative overflow-hidden px-4 py-2 rounded cursor-pointer transition-colors duration-300
+                    className={`relative overflow-hidden px-4 py-2 font-bold rounded cursor-pointer transition-colors duration-300
             before:absolute before:inset-0 before:bg-gradient-to-r before:from-pink-500 before:to-purple-500 before:opacity-0 hover:before:opacity-10
             ${
               tabValue === "hiddenpotion"
@@ -279,7 +279,7 @@ export default function Smaki() {
                     HIDDEN POTION
                   </DropdownMenu.Item>
                   <DropdownMenu.Item
-                    className={`relative overflow-hidden px-4 py-2 rounded cursor-pointer transition-colors duration-300
+                    className={`relative overflow-hidden px-4 py-2 font-bold rounded cursor-pointer transition-colors duration-300
             before:absolute before:inset-0 before:bg-gradient-to-r before:from-pink-500 before:to-purple-500 before:opacity-0 hover:before:opacity-10
             ${
               tabValue === "lescreations"

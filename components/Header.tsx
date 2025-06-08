@@ -28,8 +28,8 @@ const Header = () => {
 
         <div className="flex items-center gap-8">
           <Link href="/kontakt">
-            <button className="relative overflow-hidden px-6 py-2 rounded-md bg-accent transition-all duration-300 before:absolute before:inset-0 before:bg-gradient-to-r before:from-pink-500 before:to-purple-500 before:opacity-0 hover:before:opacity-20 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink-500">
-              <span className=" text-black relative z-10 inline-block opacity-0 animate-fade-in">
+            <button className="relative overflow-hidden px-6 py-2 rounded-xl bg-accent transition-all duration-300 before:absolute before:inset-0 before:bg-gradient-to-r before:from-pink-500 before:to-purple-500 before:opacity-0 hover:before:opacity-20 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink-500">
+              <span className=" text-black font-bold relative z-10 inline-block opacity-0 animate-fade-in">
                 Kontakt
               </span>
             </button>
