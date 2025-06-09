@@ -75,12 +75,12 @@ export default function Smaki() {
   const ultimate = {
     title: "ULTIMATE",
     items: [
-      { name: "RAGNAROK", taste: "Truskawki, Porzeczka, Malina, Jeżyna i Mango + Chłodzik", image: "/assets/ULTIMATE/RAGNAROK.png" },
+      { name: "RAGNAROK", taste: "Truskawka, Porzeczka, Malina, Jeżyna i Mango + Chłodzik", image: "/assets/ULTIMATE/RAGNAROK.png" },
       { name: "ONI", taste: "Limonka i Orzeźwiające Cytrusy", image: "/assets/ULTIMATE/ONI.png" },
       { name: "SHINIGAMI", taste: "Kwaśne Jabłko + Chłodzik", image: "/assets/ULTIMATE/SHINIGAMI.png" },
       { name: "VALKYRIE", taste: "Czerwona Porzeczka, Jeżyna, Jagoda i Malina + Chłodzik", image: "/assets/ULTIMATE/VALKYRIE.png" },
       { name: "KAMI", taste: "Truskawka i Smoczy Owoc", image: "/assets/ULTIMATE/KAMI.png" },
-      { name: "ALUCARD", taste: "Koktajl Mleczny z Wanilii, Karmelu i Herbatników", image: "/assets/ULTIMATE/ALUCARD.png" },
+      { name: "ALUCARD", taste: "Waniliowo-Karmelowy Koktajl Mleczny z Nutą Herbatników", image: "/assets/ULTIMATE/ALUCARD.png" },
     ],
   };
 
@@ -95,11 +95,11 @@ export default function Smaki() {
   const lescreations = {
     title: "LES CRÉATIONS",
     items: [
-      { name: "DIABOLIK", taste: "Owoce Cytrusowe, Czerwone Owoce, Mięta + Chłodzik", image: "/assets/LESCREATIONS/DIABOLIK.png" },
+      { name: "DIABOLIK", taste: "Cytrusy, Leśne Owoce, Mięta + Chłodzik", image: "/assets/LESCREATIONS/DIABOLIK.png" },
       { name: "QUEEN PEACH", taste: "Brzoskwinia, Malina i Kiwi", image: "/assets/LESCREATIONS/QUEEN PEACH.png" },
-      { name: "KAWAII", taste: "Owoc Smoka, Guawa, Truskawka i Kiwi", image: "/assets/LESCREATIONS/KAWAII.png" },
-      { name: "FREEZY COLA", taste: "Coca-Cola", image: "/assets/LESCREATIONS/FREEZY COLA.png" },
-      { name: "HUNGRY BEAR", taste: "Czerwone Owoce i Cukierki Lukrecji + Chłodzik", image: "/assets/LESCREATIONS/HUNGRY BEAR.png" },
+      { name: "KAWAII", taste: "Smoczy Owoc, Guawa, Truskawka i Kiwi", image: "/assets/LESCREATIONS/KAWAII.png" },
+      { name: "FREEZY COLA", taste: "Coca-Cola + Chłodzik", image: "/assets/LESCREATIONS/FREEZY COLA.png" },
+      { name: "HUNGRY BEAR", taste: "Leśne Owoce z Lukrecją + Chłodzik", image: "/assets/LESCREATIONS/HUNGRY BEAR.png" },
     ],
   };
 
