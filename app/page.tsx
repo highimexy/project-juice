@@ -38,7 +38,7 @@ function FlavorTile({ name, taste, image, activeTile, setActiveTile }: FlavorTil
       onClick={() => setActiveTile(isActive ? null : name)}
       className="group relative bg-[#232329] h-[184px] py-4 rounded-xl flex justify-between items-center cursor-pointer transition-all duration-300"
     >
-      <div className="pointer-events-none absolute inset-0 rounded-xl before:transition-all before:duration-300 before:absolute before:inset-0 before:rounded-xl before:bg-gradient-to-r before:from-pink-500 before:to-purple-500 before:opacity-0 hover:before:opacity-10 md:hover:before:opacity-10" />
+      <div className="pointer-events-none absolute inset-0 rounded-xl" />
 
       {isActive && (
         <div className="absolute inset-0 bg-[#0f0f11] bg-opacity-90 z-10 rounded-xl flex items-center justify-center text-center p-4">

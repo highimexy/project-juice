@@ -1,12 +1,11 @@
+import type { Config } from "tailwindcss";
+
 export default {
   darkMode: ["class"],
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
-  safelist: [
-    "supports-[hover:hover]:group-hover:before:opacity-10",
   ],
   theme: {
     extend: {
@@ -18,7 +17,7 @@ export default {
         },
       },
       fontFamily: {
-        primary: "var(--font-jestbrainsMono)",
+        primary: "var(--font-jestbrainsMono)",  // Reference the variable correctly
       },
       screens: {
         sm: '640px',
