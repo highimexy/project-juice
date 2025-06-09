@@ -168,7 +168,7 @@ export default function Smaki() {
     >
       <div className="container mx-auto">
         {/* Dropdown mobile */}
-        <div className="xl:hidden mb-36 mt-[-48] flex justify-center">
+        <div className="xl:hidden mb-[36px] mt-[-48px] flex justify-center">
           <DropdownMenu.Root>
             <DropdownMenu.Trigger
               className="inline-flex items-center justify-between gap-2 w-[347px] px-6 py-3 bg-[#232329] rounded-xl cursor-pointer text-white font-semibold text-lg select-none"
@@ -178,7 +178,7 @@ export default function Smaki() {
             </DropdownMenu.Trigger>
 
             <DropdownMenu.Portal>
-              <DropdownMenu.Content className="bg-[#232329] rounded-xl p-2 shadow-lg min-w-[347px] mt-2">
+              <DropdownMenu.Content className="bg-[#232329] rounded-xl p-2 shadow-lg min-w-[347px] mt-[2px]">
                 {tabs.map((tab) => (
                   <DropdownMenu.Item
                     key={tab.value}
