@@ -46,7 +46,7 @@ function FlavorTile({ name, taste, image, activeTile, setActiveTile }: FlavorTil
         </div>
       )}
 
-      <div className="flex flex-col gap-4 w-[190px] h-[150px] sm:w-[300px] z-0 items-left justify-center ml-[10px]">
+      <div className="flex flex-col gap-4 w-[190px] h-[150px] sm:w-[300px] z-0 items-left justify-center ml-[15px] sm:ml-[30px]">
         <div className="flex items-center gap-2">
           <span className="w-[10px] h-[10px] rounded-full bg-accent"></span>
           <h3 className="text-2xl sm:text-4xl text-white whitespace-nowrap">{name}</h3>
