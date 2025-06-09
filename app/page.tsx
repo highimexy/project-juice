@@ -1,7 +1,7 @@
 "use client";
 
 import { FaAngleDown } from "react-icons/fa6";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
@@ -35,42 +35,25 @@ function FlavorTile({ name, taste, image }: FlavorTileProps) {
         </div>
       </div>
 
+
+
       <div className="z-0">
         <Image
           src={image}
           priority
           quality={100}
-          width={160}
-          height={160}
+          width={160}        // domyślnie (desktop)
+          height={160}       // domyślnie (desktop)
           alt={name}
-          className="sm:w-[160px] sm:h-[160px] w-[200px] h-[200px]"
+          className="sm:w-[160px] sm:h-[160px] w-[200px] h-[200px]"  // 200x200 na mobile, 160x160 na sm i wyżej
         />
       </div>
     </div>
   );
 }
 
-function useViewportHeightOffset(offset: number) {
-  const [height, setHeight] = useState("100vh");
-
-  useEffect(() => {
-    function updateHeight() {
-      const vh = window.innerHeight;
-      setHeight(`${vh - offset}px`);
-    }
-
-    updateHeight();
-    window.addEventListener("resize", updateHeight);
-
-    return () => window.removeEventListener("resize", updateHeight);
-  }, [offset]);
-
-  return height;
-}
-
 export default function Smaki() {
   const [tabValue, setTabValue] = useState("ultimate");
-  const scrollHeight = useViewportHeightOffset(320);
 
   const ultimate = {
     title: "ULTIMATE",
@@ -163,13 +146,14 @@ export default function Smaki() {
 
   function renderItems(category: typeof ultimate | typeof hiddenpotion | typeof lescreations) {
     return (
-      <ScrollArea style={{ height: scrollHeight }} className="xl:h-[600px] pb-[env(safe-area-inset-bottom)]">
+      <ScrollArea className="h-[calc(100dvh-320px)] xl:h-[600px] pb-[env(safe-area-inset-bottom)]">
         <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[20px]">
           {category.items.map((item, index) => (
             <FlavorTile key={index} {...item} />
           ))}
         </ul>
       </ScrollArea>
+
     );
   }
 
@@ -199,7 +183,8 @@ export default function Smaki() {
                   <DropdownMenu.Item
                     key={tab.value}
                     onSelect={() => setTabValue(tab.value)}
-                    className={`relative overflow-hidden px-4 py-2 rounded-xl transition-all duration-300 before:absolute before:inset-0 before:bg-gradient-to-r before:from-pink-500 before:to-purple-500 before:opacity-0 hover:before:opacity-20 ${tab.value === tabValue ? "before:opacity-20" : ""}`}
+                    className={`relative overflow-hidden px-4 py-2 rounded-xl transition-all duration-300 before:absolute before:inset-0 before:bg-gradient-to-r before:from-pink-500 before:to-purple-500 before:opacity-0 hover:before:opacity-20 ${tab.value === tabValue ? "before:opacity-20" : ""
+                      }`}
                   >
                     {tab.label}
                   </DropdownMenu.Item>
@@ -208,6 +193,7 @@ export default function Smaki() {
             </DropdownMenu.Portal>
           </DropdownMenu.Root>
         </div>
+
 
         {/* Tabs desktop */}
         <Tabs
