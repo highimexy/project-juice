@@ -111,7 +111,7 @@ export default function Smaki() {
 
   function renderItems(category: typeof ultimate | typeof hiddenpotion | typeof lescreations) {
     return (
-      <ScrollArea className="h-[calc(100dvh-320px)] xl:h-[600px] pb-[env(safe-area-inset-bottom)]">
+      <ScrollArea className="h-[calc(100dvh-320px)] xl:h-[600px] pb-[env(safe-area-inset-bottom)] overflow-visible">
         <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[20px]">
           {category.items.map((item, index) => (
             <FlavorTile
@@ -144,7 +144,7 @@ export default function Smaki() {
             </DropdownMenu.Trigger>
 
             <DropdownMenu.Portal>
-              <DropdownMenu.Content className="bg-[#232329] rounded-xl p-2 shadow-lg min-w-[347px] mt-[2px]">
+              <DropdownMenu.Content className="z-[60] bg-[#232329] rounded-xl p-2 shadow-lg min-w-[347px] mt-[2px]">
                 {tabs.map((tab) => (
                   <DropdownMenu.Item
                     key={tab.value}
