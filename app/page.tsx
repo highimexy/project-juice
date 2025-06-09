@@ -38,7 +38,7 @@ function FlavorTile({ name, taste, image, activeTile, setActiveTile }: FlavorTil
       onClick={() => setActiveTile(isActive ? null : name)}
       className="group relative bg-[#232329] h-[184px] py-4 rounded-xl flex justify-between items-center cursor-pointer transition-all duration-300"
     >
-      <div className="pointer-events-none absolute inset-0 rounded-xl before:transition-all before:duration-300 before:absolute before:inset-0 before:rounded-xl before:bg-gradient-to-r before:from-pink-500 before:to-purple-500 before:opacity-0 group-hover:before:opacity-10 touch:before:opacity-0" />
+      <div className="pointer-events-none absolute inset-0 rounded-xl before:transition-all before:duration-300 before:absolute before:inset-0 before:rounded-xl before:bg-gradient-to-r before:from-pink-500 before:to-purple-500 before:opacity-0 hover:before:opacity-10 md:hover:before:opacity-10" />
 
       {isActive && (
         <div className="absolute inset-0 bg-[#0f0f11] bg-opacity-90 z-10 rounded-xl flex items-center justify-center text-center p-4">
@@ -46,7 +46,7 @@ function FlavorTile({ name, taste, image, activeTile, setActiveTile }: FlavorTil
         </div>
       )}
 
-      <div className="flex flex-col gap-4 w-[200px] h-[150px] sm:w-[300px] z-0 items-left justify-center ml-[10px]">
+      <div className="flex flex-col gap-4 w-[190px] h-[150px] sm:w-[300px] z-0 items-left justify-center ml-[10px]">
         <div className="flex items-center gap-2">
           <span className="w-[10px] h-[10px] rounded-full bg-accent"></span>
           <h3 className="text-2xl sm:text-4xl text-white whitespace-nowrap">{name}</h3>
