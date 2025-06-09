@@ -1,17 +1,77 @@
 "use client";
 
 import { FaAngleDown } from "react-icons/fa6";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 
+interface FlavorTileProps {
+  name: string;
+  taste: string;
+  image: string;
+}
+
+function FlavorTile({ name, taste, image }: FlavorTileProps) {
+  const [showTaste, setShowTaste] = useState(false);
+
+  return (
+    <div
+      onClick={() => setShowTaste((prev) => !prev)}
+      className="relative bg-[#232329] h-[184px] py-6 px-4 rounded-xl flex justify-between items-center cursor-pointer transition-all duration-300 hover:before:absolute hover:before:inset-0 hover:before:bg-gradient-to-r hover:before:from-pink-500 hover:before:to-purple-500 hover:before:opacity-10 hover:before:rounded-xl"
+    >
+      {showTaste && (
+        <div className="absolute inset-0 bg-[#0f0f11] bg-opacity-90 z-10 rounded-xl flex items-center justify-center text-center p-4">
+          <p className="text-white text-lg font-semibold">{taste}</p>
+        </div>
+      )}
+
+      <div className="flex flex-col gap-4 w-[130px] h-[150px] sm:w-[250px] z-0 items-center justify-center">
+        <div className="flex items-center gap-2">
+          <span className="w-[10px] h-[10px] rounded-full bg-accent"></span>
+          <h3 className="text-2xl sm:text-4xl text-white">{name}</h3>
+        </div>
+      </div>
+
+      <div className="z-0">
+        <Image
+          src={image}
+          priority
+          quality={100}
+          width={160}
+          height={160}
+          alt={name}
+          className="sm:w-[160px] sm:h-[160px] w-[200px] h-[200px]"
+        />
+      </div>
+    </div>
+  );
+}
+
+function useViewportHeightOffset(offset: number) {
+  const [height, setHeight] = useState("100vh");
+
+  useEffect(() => {
+    function updateHeight() {
+      const vh = window.innerHeight;
+      setHeight(`${vh - offset}px`);
+    }
+
+    updateHeight();
+    window.addEventListener("resize", updateHeight);
+
+    return () => window.removeEventListener("resize", updateHeight);
+  }, [offset]);
+
+  return height;
+}
+
 export default function Smaki() {
   const [tabValue, setTabValue] = useState("ultimate");
+  const scrollHeight = useViewportHeightOffset(320);
 
-  // ULTIMATE data
   const ultimate = {
     title: "ULTIMATE",
     items: [
@@ -45,21 +105,9 @@ export default function Smaki() {
         taste: "Koktajl Mleczny z Wanilii, Karmelu i Herbatników",
         image: "/assets/ULTIMATE/ALUCARD.png",
       },
-      /*{
-      name: "LUNA",
-      taste: "Truskawka i Wiśnia + Chłodzik",
-      image: "/assets/ULTIMATE/LUNA.png",
-    },
-    {
-      name: "YAKUZA",
-      taste: "Liczi, Ananas + Chłodzik",
-      image: "/assets/ULTIMATE/YAKUZA.png",
-    },*/
     ],
   };
-  {
-    /* Hidden Potion */
-  }
+
   const hiddenpotion = {
     title: "HIDDEN POTION",
     items: [
@@ -68,46 +116,14 @@ export default function Smaki() {
         taste: "Mango, Ananas, Marakuja + Chłodzik",
         image: "/assets/HIDDENPOTION/SECRET MANGO.png",
       },
-      /*{
-      name: "GREEN OASIS",
-      taste: "Kaktus, Czerwone Owoce, Cytryna + Chłodzik",
-      image: "/assets/HIDDENPOTION/GREEN OASIS.png",
-    },
-    {
-      name: "SEVEN SINS",
-      taste: "Nektarynka i Morela + Chłodzik",
-      image: "/assets/HIDDENPOTION/SEVEN SINS.png",
-    },
-    {
-      name: "EXPLOSIVE MELON",
-      taste: "Melon",
-      image: "/assets/HIDDENPOTION/EXPLOSIVE MELON.png",
-    },
-    {
-      name: "GREEN BANANA",
-      taste: "Banan i Kiwi + Chłodzik",
-      image: "/assets/HIDDENPOTION/GREEN BANANA.png",
-    },
-    {
-      name: "RED PINEAPLE",
-      taste: "Ananas i Truskawka + Chłodzik",
-      image: "/assets/HIDDENPOTION/RED PINEAPLE.png",
-    },*/
       {
         name: "MYSTIC RED",
         taste: "Czerwone Owoce i Tajemniczy Składnik + Chłodzik",
         image: "/assets/HIDDENPOTION/MYSTIC RED.png",
       },
-      /*{
-      name: "GREEDY LEMON",
-      taste: "Tarta z Żółtą i Zieloną Cytryną",
-      image: "/assets/HIDDENPOTION/GREEDY LEMON.png",
-    },*/
     ],
   };
-  {
-    /* lescreations */
-  }
+
   const lescreations = {
     title: "LES CRÉATIONS",
     items: [
@@ -116,16 +132,6 @@ export default function Smaki() {
         taste: "Owoce Cytrusowe, Czerwone Owoce, Mięta + Chłodzik",
         image: "/assets/LESCREATIONS/DIABOLIK.png",
       },
-      /*{
-      name: "CINEMATIK",
-      taste: "Karmelizowany Popcorn",
-      image: "/assets/LESCREATIONS/CINEMATIK.png",
-    },
-    {
-      name: "BIIIIIATCH",
-      taste: "Truskawka i Grejfrut",
-      image: "/assets/LESCREATIONS/BIATCH.png",
-    },*/
       {
         name: "QUEEN PEACH",
         taste: "Brzoskwinia, Malina i Kiwi",
@@ -141,21 +147,6 @@ export default function Smaki() {
         taste: "Coca-Cola",
         image: "/assets/LESCREATIONS/FREEZY COLA.png",
       },
-      /*{
-      name: "SWEETY MONKEY",
-      taste: "Banan i Truskawka",
-      image: "/assets/LESCREATIONS/SWEET MONKEY.png",
-    }, */
-      /* {
-      name: "KRO-MIGNON",
-      taste: "Malina i Jeżyna",
-      image: "/assets/LESCREATIONS/KRO-MIGNON.png",
-    },
-    {
-      name: "FROSTED BOY",
-      taste: "Cytryna i Malina + Chłodzik",
-      image: "/assets/LESCREATIONS/FROSTED BOY.png",
-    },*/
       {
         name: "HUNGRY BEAR",
         taste: "Czerwone Owoce i Cukierki Lukrecji + Chłodzik",
@@ -164,35 +155,18 @@ export default function Smaki() {
     ],
   };
 
-  function renderItems(
-    category: typeof ultimate | typeof hiddenpotion | typeof lescreations
-  ) {
+  const tabs = [
+    { value: "ultimate", label: "ULTIMATE" },
+    { value: "hiddenpotion", label: "HIDDEN POTION" },
+    { value: "lescreations", label: "LES CRÉATIONS" },
+  ];
+
+  function renderItems(category: typeof ultimate | typeof hiddenpotion | typeof lescreations) {
     return (
-      <ScrollArea className="h-[calc(100vh-280px)] xl:h-[600px]">
+      <ScrollArea style={{ height: scrollHeight }} className="xl:h-[600px] pb-[env(safe-area-inset-bottom)]">
         <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[20px]">
           {category.items.map((item, index) => (
-            <li
-              key={index}
-              className="bg-[#232329] h-[184px] py-6 px-4 rounded-xl flex flex-row justify-between items-center"
-            >
-              <div className="flex flex-col gap-4 w-[250px] h-[150px]">
-                <div className="flex items-center gap-2">
-                  <span className="w-[10px] h-[10px] rounded-full bg-accent"></span>
-                  <h3 className="text-2xl text-left">{item.name}</h3>
-                </div>
-                <span className="text-accent text-left">{item.taste}</span>
-              </div>
-              <div>
-                <Image
-                  src={item.image}
-                  priority
-                  quality={100}
-                  width={145}
-                  height={145}
-                  alt={item.name}
-                />
-              </div>
-            </li>
+            <FlavorTile key={index} {...item} />
           ))}
         </ul>
       </ScrollArea>
@@ -209,111 +183,66 @@ export default function Smaki() {
       className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0 xl:mt-[-50px]"
     >
       <div className="container mx-auto">
+        {/* Dropdown mobile */}
+        <div className="xl:hidden mb-36 mt-[-48] flex justify-center">
+          <DropdownMenu.Root>
+            <DropdownMenu.Trigger
+              className="inline-flex items-center justify-between gap-2 w-[347px] px-6 py-3 bg-[#232329] rounded-xl cursor-pointer text-white font-semibold text-lg select-none"
+            >
+              {tabs.find((t) => t.value === tabValue)?.label}
+              <FaAngleDown className="text-xl" />
+            </DropdownMenu.Trigger>
+
+            <DropdownMenu.Portal>
+              <DropdownMenu.Content className="bg-[#232329] rounded-xl p-2 shadow-lg min-w-[347px] mt-2">
+                {tabs.map((tab) => (
+                  <DropdownMenu.Item
+                    key={tab.value}
+                    onSelect={() => setTabValue(tab.value)}
+                    className={`relative overflow-hidden px-4 py-2 rounded-xl transition-all duration-300 before:absolute before:inset-0 before:bg-gradient-to-r before:from-pink-500 before:to-purple-500 before:opacity-0 hover:before:opacity-20 ${tab.value === tabValue ? "before:opacity-20" : ""}`}
+                  >
+                    {tab.label}
+                  </DropdownMenu.Item>
+                ))}
+              </DropdownMenu.Content>
+            </DropdownMenu.Portal>
+          </DropdownMenu.Root>
+        </div>
+
+        {/* Tabs desktop */}
         <Tabs
           value={tabValue}
           onValueChange={setTabValue}
           className="flex flex-col xl:flex-row gap-[60px]"
         >
-          {/* Desktop Tabs */}
           <TabsList className="hidden xl:flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-            <TabsTrigger
-              value="ultimate"
-              className="relative overflow-hidden px-4 py-2 rounded transition-all duration-300 before:absolute before:inset-0 before:bg-gradient-to-r before:from-pink-500 before:to-purple-500 before:opacity-0 hover:before:opacity-20"
-            >
-              <span className="relative z-10 opacity-0 animate-fade-in">
-                ULTIMATE
-              </span>
-            </TabsTrigger>
-            <TabsTrigger
-              value="hiddenpotion"
-              className="relative overflow-hidden px-4 py-2 rounded transition-all duration-300 before:absolute before:inset-0 before:bg-gradient-to-r before:from-pink-500 before:to-purple-500 before:opacity-0 hover:before:opacity-20"
-            >
-              <span className="relative z-10 opacity-0 animate-fade-in ">
-                HIDDEN POTION
-              </span>
-            </TabsTrigger>
-            <TabsTrigger
-              value="lescreations"
-              className="relative overflow-hidden px-4 py-2 rounded transition-all duration-300 before:absolute before:inset-0 before:bg-gradient-to-r before:from-pink-500 before:to-purple-500 before:opacity-0 hover:before:opacity-20"
-            >
-              <span className="relative z-10 opacity-0 animate-fade-in">
-                LES CRÉATIONS
-              </span>
-            </TabsTrigger>
+            {tabs.map((tab) => (
+              <TabsTrigger
+                key={tab.value}
+                value={tab.value}
+                className="relative overflow-hidden px-4 py-2 rounded transition-all duration-300 before:absolute before:inset-0 before:bg-gradient-to-r before:from-pink-500 before:to-purple-500 before:opacity-0 hover:before:opacity-20"
+              >
+                <span className="relative z-10 opacity-0 animate-fade-in">{tab.label}</span>
+              </TabsTrigger>
+            ))}
           </TabsList>
 
-          {/* Mobile Dropdown */}
-          <div className="block xl:hidden w-full max-w-[380px] mx-auto mt-[-70px]">
-            <DropdownMenu.Root>
-              <DropdownMenu.Trigger
-                className="relative overflow-hidden z-0 bg-[#383944] text-black py-3 px-6 font-bold text-2xl rounded-xl w-full text-center flex items-center justify-center gap-2 transition-colors duration-300
-        before:absolute before:inset-0 before:bg-gradient-to-r before:from-pink-500 before:to-purple-500 before:opacity-0 hover:before:opacity-20"
-              >
-                SMAKI
-                <FaAngleDown className="text-lg" />
-              </DropdownMenu.Trigger>
-              <DropdownMenu.Portal>
-                <DropdownMenu.Content
-                  side="bottom"
-                  align="center"
-                  className="bg-[#383944] rounded-lg p-2 shadow-lg mt-[8px] w-[var(--radix-dropdown-menu-trigger-width)]"
-                >
-                  <DropdownMenu.Item
-                    className={`relative overflow-hidden px-4 py-2 font-bold rounded cursor-pointer transition-colors duration-300
-            before:absolute before:inset-0 before:bg-gradient-to-r before:from-pink-500 before:to-purple-500 before:opacity-0 hover:before:opacity-10
-            ${tabValue === "ultimate" ? "bg-accent text-black" : "text-white"}`}
-                    onSelect={() => setTabValue("ultimate")}
-                  >
-                    ULTIMATE
-                  </DropdownMenu.Item>
-                  <DropdownMenu.Item
-                    className={`relative overflow-hidden px-4 py-2 font-bold rounded cursor-pointer transition-colors duration-300
-            before:absolute before:inset-0 before:bg-gradient-to-r before:from-pink-500 before:to-purple-500 before:opacity-0 hover:before:opacity-10
-            ${
-              tabValue === "hiddenpotion"
-                ? "bg-accent text-black"
-                : "text-white"
-            }`}
-                    onSelect={() => setTabValue("hiddenpotion")}
-                  >
-                    HIDDEN POTION
-                  </DropdownMenu.Item>
-                  <DropdownMenu.Item
-                    className={`relative overflow-hidden px-4 py-2 font-bold rounded cursor-pointer transition-colors duration-300
-            before:absolute before:inset-0 before:bg-gradient-to-r before:from-pink-500 before:to-purple-500 before:opacity-0 hover:before:opacity-10
-            ${
-              tabValue === "lescreations"
-                ? "bg-accent text-black"
-                : "text-white"
-            }`}
-                    onSelect={() => setTabValue("lescreations")}
-                  >
-                    LES CRÉATIONS
-                  </DropdownMenu.Item>
-                </DropdownMenu.Content>
-              </DropdownMenu.Portal>
-            </DropdownMenu.Root>
-          </div>
-
-          {/* Content */}
-          <div className="min-h-[70vh] max-h-[3] mt-[-40px]">
+          <div className="min-h-[70vh] max-h-[3] mt-[-100px] w-full">
             <TabsContent value="ultimate" className="w-full">
-              <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{ultimate.title}</h3>
+              <div className="flex flex-col gap-[30px] text-center xl:text-center">
+                <h3 className="text-5xl font-bold">{ultimate.title}</h3>
                 {renderItems(ultimate)}
               </div>
             </TabsContent>
-
             <TabsContent value="hiddenpotion" className="w-full">
-              <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{hiddenpotion.title}</h3>
+              <div className="flex flex-col gap-[30px] text-center xl:text-center">
+                <h3 className="text-5xl font-bold">{hiddenpotion.title}</h3>
                 {renderItems(hiddenpotion)}
               </div>
             </TabsContent>
-
             <TabsContent value="lescreations" className="w-full">
-              <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{lescreations.title}</h3>
+              <div className="flex flex-col gap-[30px] text-center xl:text-center">
+                <h3 className="text-5xl font-bold">{lescreations.title}</h3>
                 {renderItems(lescreations)}
               </div>
             </TabsContent>
