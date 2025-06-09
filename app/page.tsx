@@ -36,7 +36,7 @@ function FlavorTile({ name, taste, image, activeTile, setActiveTile }: FlavorTil
     <div
       ref={ref}
       onClick={() => setActiveTile(isActive ? null : name)}
-      className="group relative bg-[#232329] h-[184px] py-6 px-4 rounded-xl flex justify-between items-center cursor-pointer transition-all duration-300"
+      className="group relative bg-[#232329] h-[184px] py-4 rounded-xl flex justify-between items-center cursor-pointer transition-all duration-300"
     >
       <div className="pointer-events-none absolute inset-0 rounded-xl before:transition-all before:duration-300 before:absolute before:inset-0 before:rounded-xl before:bg-gradient-to-r before:from-pink-500 before:to-purple-500 before:opacity-0 group-hover:before:opacity-10 touch:before:opacity-0" />
 
@@ -46,10 +46,10 @@ function FlavorTile({ name, taste, image, activeTile, setActiveTile }: FlavorTil
         </div>
       )}
 
-      <div className="flex flex-col gap-4 w-[130px] h-[150px] sm:w-[250px] z-0 items-center justify-center">
+      <div className="flex flex-col gap-4 w-[200px] h-[150px] sm:w-[300px] z-0 items-left justify-center ml-[10px]">
         <div className="flex items-center gap-2">
           <span className="w-[10px] h-[10px] rounded-full bg-accent"></span>
-          <h3 className="text-2xl sm:text-4xl text-white">{name}</h3>
+          <h3 className="text-2xl sm:text-4xl text-white whitespace-nowrap">{name}</h3>
         </div>
       </div>
 
@@ -61,7 +61,7 @@ function FlavorTile({ name, taste, image, activeTile, setActiveTile }: FlavorTil
           width={160}
           height={160}
           alt={name}
-          className="sm:w-[160px] sm:h-[160px] w-[200px] h-[200px]"
+          className="sm:w-[180px] sm:h-[180px] w-[200px] h-[200px]"
         />
       </div>
     </div>
