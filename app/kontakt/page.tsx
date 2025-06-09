@@ -22,7 +22,7 @@ const Kontakt = () => {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="py-6 min-h-[80vh] flex items-center justify-center"
+      className="py-6 min-h-[80vh] flex items-center justify-center mt-[-48px]"
     >
       <div className="container mx-auto">
         {/* info */}
@@ -46,7 +46,7 @@ const Kontakt = () => {
             src="/assets/QR.png"
             alt="QR Code"
             style={{ width: "460px", height: "460px" }}
-            className="object-contain mt-[-76px]"
+            className="object-contain mt-[-84px]"
           />
 
         </div>
