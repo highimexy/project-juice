@@ -18,7 +18,7 @@ const Header = () => {
         
         {/* LOGO z efektem glitch */}
         <Link href="/">
-          <GlitchLogo src="/assets/photo.png" size={175} />
+          <GlitchLogo src="/assets/photo.png" size={150} />
         </Link>
 
         {/* Nawigacja / przycisk */}

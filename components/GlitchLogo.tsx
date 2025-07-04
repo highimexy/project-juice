@@ -8,7 +8,7 @@ interface GlitchLogoProps {
   size?: number; // wysokość docelowa
 }
 
-const GlitchLogo = ({ src, size = 175 }: GlitchLogoProps) => {
+const GlitchLogo = ({ src, size = 150 }: GlitchLogoProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
   const [aspectRatio, setAspectRatio] = useState(1);
