@@ -20,11 +20,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Project Juice",
     description: "High-quality vape oils for enthusiasts.",
-    url: "https://project-juice.com",
+    url: "https://www.projectjuice.pl",
     siteName: "Project Juice",
     images: [
       {
-        url: "https://www.projectjuice.pl/_next/image?url=%2Fassets%2Fphoto.png&w=640&q=100", // Podmień na swój realny link do grafiki
+        url: "https://www.projectjuice.pl/assets/photo.png",
         alt: "Project Juice - Vape Oils",
       },
     ],
@@ -32,10 +32,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@projectjuice", // Podmień na realne konto Twitter, jeśli masz
-    images: ["https://www.projectjuice.pl/_next/image?url=%2Fassets%2Fphoto.png&w=640&q=100g"], // Taki sam obraz jak w Open Graph
+    site: "@projectjuice",
+    images: ["https://www.projectjuice.pl/assets/photo.png"],
   },
 };
+
 
 export default function RootLayout({
   children,
