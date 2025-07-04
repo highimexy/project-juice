@@ -76,11 +76,15 @@ export default function Smaki() {
     title: "ULTIMATE",
     items: [
       { name: "RAGNAROK", taste: "Truskawka, Porzeczka, Malina, Jeżyna i Mango + Chłodzik", image: "/assets/ULTIMATE/RAGNAROK.png" },
-      { name: "ONI", taste: "Limonka i Orzeźwiające Cytrusy", image: "/assets/ULTIMATE/ONI.png" },
-      { name: "SHINIGAMI", taste: "Kwaśne Jabłko + Chłodzik", image: "/assets/ULTIMATE/SHINIGAMI.png" },
-      { name: "VALKYRIE", taste: "Czerwona Porzeczka, Jeżyna, Jagoda i Malina + Chłodzik", image: "/assets/ULTIMATE/VALKYRIE.png" },
-      { name: "KAMI", taste: "Truskawka i Smoczy Owoc", image: "/assets/ULTIMATE/KAMI.png" },
+      { name: "ONI ZERO", taste: "Limonka i Orzeźwiające Cytrusy", image: "/assets/ULTIMATE/ONI.png" },
+      { name: "VALKYRIE", taste: "Mix czerwonych owoców + Chłodzik", image: "/assets/ULTIMATE/VALKYRIE.png" },
+      { name: "VALKYRIE ZERO", taste: "Mix czerwonych owoców", image: "/assets/ULTIMATE/VALKYRIE.png" },
+      
+      { name: "KAMI ZERO", taste: "Truskawka i Smoczy Owoc", image: "/assets/ULTIMATE/KAMI.png" },
       { name: "ALUCARD", taste: "Waniliowo-Karmelowy Koktajl Mleczny z Nutą Herbatników", image: "/assets/ULTIMATE/ALUCARD.png" },
+      { name: "JIRAYA", taste: "Puszysta flotanta i słodki karmel", image: "/assets/ULTIMATE/JIRAYA.png" },
+      { name: "FURY ZERO", taste: "Soczysty smak mango", image: "/assets/ULTIMATE/FURY ZERO.png" },
+      { name: "LEVIATHAN-V2", taste: "Truskawki z delikatnym chłodzeniem i słodzikiem", image: "/assets/ULTIMATE/LEVIATHAN V2.png" },
     ],
   };
 
@@ -89,6 +93,8 @@ export default function Smaki() {
     items: [
       { name: "SECRET MANGO", taste: "Mango, Ananas, Marakuja + Chłodzik", image: "/assets/HIDDENPOTION/SECRET MANGO.png" },
       { name: "MYSTIC RED", taste: "Czerwone Owoce i Tajemniczy Składnik + Chłodzik", image: "/assets/HIDDENPOTION/MYSTIC RED.png" },
+      { name: "GREEDY LEMON", taste: "Beza z cytrynową nutą", image: "/assets/HIDDENPOTION/GREEDY LEMON.png" },
+      { name: "PŁATKI Z MLEKIEM", taste: "", image: "/assets/HIDDENPOTION/PLATKI.png" },
     ],
   };
 
@@ -96,9 +102,9 @@ export default function Smaki() {
     title: "LES CRÉATIONS",
     items: [
       { name: "DIABOLIK", taste: "Cytrusy, Leśne Owoce, Mięta + Chłodzik", image: "/assets/LESCREATIONS/DIABOLIK.png" },
-      { name: "QUEEN PEACH", taste: "Brzoskwinia, Malina i Kiwi", image: "/assets/LESCREATIONS/QUEEN PEACH.png" },
+      // { name: "QUEEN PEACH", taste: "Brzoskwinia, Malina i Kiwi", image: "/assets/LESCREATIONS/QUEEN PEACH.png" },
       { name: "KAWAII", taste: "Smoczy Owoc, Guawa, Truskawka i Kiwi", image: "/assets/LESCREATIONS/KAWAII.png" },
-      { name: "FREEZY COLA", taste: "Coca-Cola + Chłodzik", image: "/assets/LESCREATIONS/FREEZY COLA.png" },
+      // { name: "FREEZY COLA", taste: "Coca-Cola + Chłodzik", image: "/assets/LESCREATIONS/FREEZY COLA.png" },
       { name: "HUNGRY BEAR", taste: "Leśne Owoce z Lukrecją + Chłodzik", image: "/assets/LESCREATIONS/HUNGRY BEAR.png" },
     ],
   };
