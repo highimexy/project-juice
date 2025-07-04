@@ -15,10 +15,10 @@ const Header = () => {
   return (
     <header className="xl:py-12 text-white mb-8">
       <div className="container mx-auto flex justify-between items-center">
-        
         {/* LOGO z efektem glitch */}
         <Link href="/">
-          <GlitchLogo src="/assets/photo.png" size={150} />
+          {/* widthScale można dostosować np. 1.2 jeśli chcesz szersze logo */}
+          <GlitchLogo src="/assets/photo.png" size={150} widthScale={2} />
         </Link>
 
         {/* Nawigacja / przycisk */}

@@ -47,12 +47,4 @@
   animation-delay: 3s;
 }
 
-.glitch-container,
-.glitch-container canvas {
-  background-color: transparent !important;
-  display: block;
-}
-
-
-
 }

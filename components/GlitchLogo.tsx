@@ -5,10 +5,11 @@ import * as THREE from "three";
 
 interface GlitchLogoProps {
   src: string;
-  size?: number; // wysokość docelowa na desktopie
+  size?: number;         // wysokość docelowa
+  widthScale?: number;   // współczynnik szerokości, domyślnie 1
 }
 
-const GlitchLogo = ({ src, size = 150 }: GlitchLogoProps) => {
+const GlitchLogo = ({ src, size = 150, widthScale = 1 }: GlitchLogoProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
   const [aspectRatio, setAspectRatio] = useState(1);
@@ -16,7 +17,7 @@ const GlitchLogo = ({ src, size = 150 }: GlitchLogoProps) => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 390) {
+      if (window.innerWidth <= 768) {
         setFinalSize(100);
       } else {
         setFinalSize(size);
@@ -108,7 +109,8 @@ const GlitchLogo = ({ src, size = 150 }: GlitchLogoProps) => {
     function initializeScene(texture: THREE.Texture) {
       if (!containerRef.current || finalSize === null) return;
 
-      const width = finalSize * aspectRatio;
+      // Obliczamy szerokość jako: wysokość * aspectRatio * widthScale
+      const width = finalSize * aspectRatio * widthScale;
       const height = finalSize;
 
       camera = new THREE.OrthographicCamera(
@@ -148,6 +150,7 @@ const GlitchLogo = ({ src, size = 150 }: GlitchLogoProps) => {
       renderer.setPixelRatio(window.devicePixelRatio);
       renderer.setSize(width, height);
 
+      // Usuń poprzedni canvas, jeśli istnieje
       if (containerRef.current.firstChild) {
         containerRef.current.removeChild(containerRef.current.firstChild);
       }
@@ -181,7 +184,7 @@ const GlitchLogo = ({ src, size = 150 }: GlitchLogoProps) => {
 
       renderer.render(scene, camera);
     }
-  }, [src, finalSize, aspectRatio]);
+  }, [src, finalSize, aspectRatio, widthScale]);
 
   if (finalSize === null) return null;
 
