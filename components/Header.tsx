@@ -1,41 +1,29 @@
 "use client";
 
 import Link from "next/link";
-import { Button } from "./ui/button";
-import Image from "next/image";
-import { motion } from "framer-motion"; // ✅ Dodany import
-import { useState } from "react"; // przykładowe użycie do obsługi sessionId
+import { motion } from "framer-motion";
+import GlitchLogo from "./GlitchLogo";
+import { useState } from "react";
 
 const Header = () => {
-  const [sessionId, setSessionId] = useState("dummy-session"); // ✅ lub przekazuj jako props
+  const [sessionId, setSessionId] = useState("dummy-session");
 
   const handleCheckout = () => {
     console.log("Proceeding to checkout...");
-    // tu dodaj logikę checkoutu
   };
 
   return (
     <header className="xl:py-12 text-white mb-8">
       <div className="container mx-auto flex justify-between items-center">
-        {/* LOGO */}
+        
+        {/* LOGO z efektem glitch */}
         <Link href="/">
-          <h1>
-            <Image
-              src="/assets/photo.png"
-              priority
-              quality={100}
-              width={220}
-              height={220}
-              alt="Logo"
-              className="object-contain"
-            />
-          </h1>
+          <GlitchLogo src="/assets/photo.png" size={175} />
         </Link>
 
-        {/* desktop nav */}
+        {/* Nawigacja / przycisk */}
         <div className="flex items-center gap-8">
           <Link href="/kontakt">
-            {/* motion button */}
             <motion.button
               onClick={handleCheckout}
               disabled={sessionId === ""}
