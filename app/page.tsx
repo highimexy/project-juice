@@ -182,7 +182,7 @@ export default function Smaki() {
             ))}
           </TabsList>
 
-          <div className="min-h-[70vh] max-h-[3] mt-[-100px] w-full">
+          <div className="min-h-[70vh] max-h-[3] mt-[-100px] xl:mt-[-150px]  w-full">
             <TabsContent value="ultimate" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-center">
                 <h3 className="text-5xl font-bold">{ultimate.title}</h3>

@@ -5,13 +5,28 @@ import * as THREE from "three";
 
 interface GlitchLogoProps {
   src: string;
-  size?: number; // wysokość docelowa
+  size?: number; // wysokość docelowa na desktopie
 }
 
 const GlitchLogo = ({ src, size = 150 }: GlitchLogoProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
   const [aspectRatio, setAspectRatio] = useState(1);
+  const [finalSize, setFinalSize] = useState<number | null>(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 390) {
+        setFinalSize(100);
+      } else {
+        setFinalSize(size);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [size]);
 
   useEffect(() => {
     if (!imageRef.current) return;
@@ -33,7 +48,7 @@ const GlitchLogo = ({ src, size = 150 }: GlitchLogoProps) => {
   }, [src]);
 
   useEffect(() => {
-    if (!containerRef.current) return;
+    if (!containerRef.current || finalSize === null) return;
 
     let scene: THREE.Scene;
     let camera: THREE.OrthographicCamera;
@@ -42,7 +57,7 @@ const GlitchLogo = ({ src, size = 150 }: GlitchLogoProps) => {
 
     const ANIMATION_CONFIG = {
       glitchIntensityMod: 0.5,
-      updateInterval: 100, // ms, czyli 0.5s
+      updateInterval: 100,
     };
 
     const vertexShader = `
@@ -91,10 +106,10 @@ const GlitchLogo = ({ src, size = 150 }: GlitchLogoProps) => {
     });
 
     function initializeScene(texture: THREE.Texture) {
-      if (!containerRef.current) return;
+      if (!containerRef.current || finalSize === null) return;
 
-      const width = size * aspectRatio;
-      const height = size;
+      const width = finalSize * aspectRatio;
+      const height = finalSize;
 
       camera = new THREE.OrthographicCamera(
         -width / 2,
@@ -166,11 +181,12 @@ const GlitchLogo = ({ src, size = 150 }: GlitchLogoProps) => {
 
       renderer.render(scene, camera);
     }
-  }, [src, size, aspectRatio]);
+  }, [src, finalSize, aspectRatio]);
+
+  if (finalSize === null) return null;
 
   return (
     <div ref={containerRef} className="glitch-container">
-      {/* obrazek tylko do pobrania proporcji, ukryty */}
       <img
         ref={imageRef}
         src={src}
@@ -179,7 +195,7 @@ const GlitchLogo = ({ src, size = 150 }: GlitchLogoProps) => {
           display: "block",
           opacity: 0,
           width: "auto",
-          height: size,
+          height: finalSize,
           pointerEvents: "none",
           userSelect: "none",
         }}
