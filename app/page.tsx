@@ -77,14 +77,14 @@ export default function Smaki() {
     items: [
       { name: "RAGNAROK", taste: "Truskawka, Porzeczka, Malina, Jeżyna i Mango + Chłodzik", image: "/assets/ULTIMATE/RAGNAROK.png" },
       { name: "ONI ZERO", taste: "Limonka i Orzeźwiające Cytrusy", image: "/assets/ULTIMATE/ONI.png" },
-      { name: "VALKYRIE", taste: "Mix czerwonych owoców + Chłodzik", image: "/assets/ULTIMATE/VALKYRIE.png" },
       { name: "VALKYRIE ZERO", taste: "Mix czerwonych owoców", image: "/assets/ULTIMATE/VALKYRIE.png" },
-      
       { name: "KAMI ZERO", taste: "Truskawka i Smoczy Owoc", image: "/assets/ULTIMATE/KAMI.png" },
+      { name: "KAMI", taste: "Truskawka i Smoczy Owoc + Chłodzik", image: "/assets/ULTIMATE/KAMI.png" },
       { name: "ALUCARD", taste: "Waniliowo-Karmelowy Koktajl Mleczny z Nutą Herbatników", image: "/assets/ULTIMATE/ALUCARD.png" },
       { name: "JIRAYA", taste: "Puszysta flotanta i słodki karmel", image: "/assets/ULTIMATE/JIRAYA.png" },
       { name: "FURY ZERO", taste: "Soczysty smak mango", image: "/assets/ULTIMATE/FURY ZERO.png" },
       { name: "LEVIATHAN-V2", taste: "Truskawki z delikatnym chłodzeniem i słodzikiem", image: "/assets/ULTIMATE/LEVIATHAN V2.png" },
+      { name: "SHINIGAMI", taste: "Kwaśne Jabłko z Zielonymi Żelkami ", image: "/assets/ULTIMATE/SHINIGAMI.png" },
     ],
   };
 
@@ -94,6 +94,7 @@ export default function Smaki() {
       { name: "SECRET MANGO", taste: "Mango, Ananas, Marakuja + Chłodzik", image: "/assets/HIDDENPOTION/SECRET MANGO.png" },
       { name: "MYSTIC RED", taste: "Czerwone Owoce i Tajemniczy Składnik + Chłodzik", image: "/assets/HIDDENPOTION/MYSTIC RED.png" },
       { name: "GREEDY LEMON", taste: "Beza z cytrynową nutą", image: "/assets/HIDDENPOTION/GREEDY LEMON.png" },
+      { name: "RED PINEAPPLE", taste: "Ananas z Soczystą Truskawką", image: "/assets/HIDDENPOTION/RED PINEAPLE.png" },
       { name: "PŁATKI Z MLEKIEM", taste: "", image: "/assets/HIDDENPOTION/PLATKI.png" },
     ],
   };
@@ -102,9 +103,7 @@ export default function Smaki() {
     title: "LES CRÉATIONS",
     items: [
       { name: "DIABOLIK", taste: "Cytrusy, Leśne Owoce, Mięta + Chłodzik", image: "/assets/LESCREATIONS/DIABOLIK.png" },
-      // { name: "QUEEN PEACH", taste: "Brzoskwinia, Malina i Kiwi", image: "/assets/LESCREATIONS/QUEEN PEACH.png" },
       { name: "KAWAII", taste: "Smoczy Owoc, Guawa, Truskawka i Kiwi", image: "/assets/LESCREATIONS/KAWAII.png" },
-      // { name: "FREEZY COLA", taste: "Coca-Cola + Chłodzik", image: "/assets/LESCREATIONS/FREEZY COLA.png" },
       { name: "HUNGRY BEAR", taste: "Leśne Owoce z Lukrecją + Chłodzik", image: "/assets/LESCREATIONS/HUNGRY BEAR.png" },
     ],
   };
@@ -142,6 +141,8 @@ export default function Smaki() {
       className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0 xl:mt-[-50px]"
     >
       <div className="container mx-auto">
+        
+        {/* Mobile Dropdown Menu */}
         <div className="xl:hidden mb-[128px] mt-[-48px] flex justify-center">
           <DropdownMenu.Root>
             <DropdownMenu.Trigger className="inline-flex items-center justify-between gap-2 w-[347px] px-6 py-3 bg-[#232329] rounded-xl cursor-pointer text-white font-semibold text-lg select-none">
@@ -165,11 +166,13 @@ export default function Smaki() {
           </DropdownMenu.Root>
         </div>
 
+
         <Tabs
           value={tabValue}
           onValueChange={setTabValue}
           className="flex flex-col xl:flex-row gap-[60px]"
         >
+          {/* Desktop Tabs List */}
           <TabsList className="hidden xl:flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
             {tabs.map((tab) => (
               <TabsTrigger
@@ -180,9 +183,10 @@ export default function Smaki() {
                 <span className="relative z-10 opacity-0 animate-fade-in">{tab.label}</span>
               </TabsTrigger>
             ))}
+
           </TabsList>
 
-          <div className="min-h-[70vh] max-h-[3] mt-[-100px] xl:mt-[-150px]  w-full">
+          <div className="min-h-[70vh] mt-[-100px] xl:mt-[-150px] w-full">
             <TabsContent value="ultimate" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-center">
                 <h3 className="text-5xl font-bold">{ultimate.title}</h3>
