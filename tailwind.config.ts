@@ -12,7 +12,7 @@ export default {
       colors: {
         primary: '#1c1c22',
         accent: {
-          DEFAULT: '#9387f7',
+          DEFAULT: '#523485',
           hover: '#897fe1'
         },
       },
