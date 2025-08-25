@@ -261,7 +261,7 @@ export default function Smaki() {
               <TabsTrigger
                 key={tab.value}
                 value={tab.value}
-                className="relative overflow-hidden px-4 py-2 rounded transition-all duration-300 before:absolute before:inset-0 before:bg-gradient-to-r before:from-pink-500 before:to-purple-500 before:opacity-0 hover:before:opacity-20"
+                className="relative overflow-hidden px-4 py-2 rounded transition-all duration-300 before:absolute before:inset-0 before:bg-gradient-to-r before:from-purple-700 before:to-purple-500 before:opacity-0 hover:before:opacity-20"
               >
                 <span className="relative z-10 opacity-0 animate-fade-in">
                   {tab.label}

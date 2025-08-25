@@ -38,7 +38,7 @@ const Header = () => {
                   ease: "linear",
                 },
               }}
-              className="bg-accent text-black font-bold px-4 py-2 rounded-xl shadow-md focus:outline-none disabled:opacity-50"
+              className="bg-accent text-white font-bold px-4 py-2 rounded-xl shadow-md focus:outline-none disabled:opacity-50"
             >
               Kontakt
             </motion.button>
